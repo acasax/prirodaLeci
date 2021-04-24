@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="venobox/venobox.min.css">
     <style>
         .ie-panel {
             display: none;
@@ -59,7 +58,7 @@
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
                                 <div class="rd-navbar-brand">
-                                    <a class="brand" href="index.html"><img src="images/logo-invert.png" alt="" width="166" height="57" /></a>
+                                    <a class="brand" href="index.html"><img src="images/Logo.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
@@ -72,7 +71,7 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#proizvod">Proizvodi</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.php">Kontakt</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -83,10 +82,48 @@
             </div>
         </header>
         <!-- Swiper Slider-->
-        <section class="section swiper-container swiper-modern" data-loop="true" data-autoplay="5500">
-        <video width="100%" autoplay loop>
-        <source src="images/video.mp4" type="video/mp4">
-        </video>
+        <section class="section swiper-container swiper-slider swiper-modern" data-loop="true" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
+            <div class="swiper-wrapper text-left">
+                <div class="swiper-slide swiper-slide-1 context-dark" data-slide-bg="images/swiper-default-01.jpg">
+                    <div class="swiper-slide-caption section-lg">
+
+                        <div class="swiper-slide-caption section-lg">
+                            <div class="container text-center">
+                                <h2 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="100">Uživajte</span></h2>
+                                <h1 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="200">u najboljem</span></h1>
+                                <h2 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="300">ukusu čaja</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-2 context-dark" data-slide-bg="images/swiper-default-02.jpg">
+                    <div class="swiper-slide-caption section-lg">
+                        <div class="swiper-slide-caption section-lg">
+                            <div class="container text-center">
+                                <h2 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="100">Probajte</span></h2>
+                                <h1 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="200">prirodne</span></h1>
+                                <h2 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="300">čajeve</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-3 context-dark" data-slide-bg="images/swiper-default-03.jpg">
+                    <div class="swiper-slide-caption section-lg">
+                        <div class="swiper-slide-caption section-lg">
+                            <div class="container text-center">
+                                <h2 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="100">Iskoristite</span></h2>
+                                <h1 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="200">lekovitost</span></h1>
+                                <h2 style="overflow: hidden;"><span style="display: block" data-caption-animate="fadeGel" data-caption-delay="300">naših ajeva</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Swiper Pagination-->
+            <div class="swiper-pagination"></div>
+            <!-- Swiper Navigation-->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </section>
         <!-- Services Box-->
         <section class="section section-box-services-full-width context-dark">
@@ -126,7 +163,7 @@
             </div>
         </section>
 
-        <section class="section bg-default section-lg section-lg-max text-center " id="oNama">
+        <section class="section bg-default section-lg section-lg-max text-center " id="oNama ">
             <div class="container ">
                 <h2>O nama</h2>
                 <div class="box-paragraph ">
@@ -144,24 +181,24 @@
                                 <div class="index-list-modern-block " data-triangle=".index-list-modern-triangle " data-triangle-direction="left" data-triangle-length="35">
                                     <div class="index-list-modern-triangle "></div>
                                     <div class="list-index-counter "></div>
-                                    <h4 class="white-text">Naša misija</h4>
-                                    <p class="white-text">Je da sa Vama podelimo čajni život kakav svi volimo.</p>
+                                    <h4>Naša misija</h4>
+                                    <p>Je da sa Vama podelimo čajni život kakav svi volimo.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="index-list-modern-block " data-triangle=".index-list-modern-triangle " data-triangle-direction="left" data-triangle-length="35">
                                     <div class="index-list-modern-triangle "></div>
                                     <div class="list-index-counter "></div>
-                                    <h4 class="white-text">Profesionalni tim</h4>
-                                    <p class="white-text">Tokom godina okupili smo tim posvećenih stručnjaka za čaj.</p>
+                                    <h4>Profesionalni tim</h4>
+                                    <p>Tokom godina okupili smo tim posvećenih stručnjaka za čaj.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="index-list-modern-block " data-triangle=".index-list-modern-triangle " data-triangle-direction="left" data-triangle-length="35">
                                     <div class="index-list-modern-triangle "></div>
                                     <div class="list-index-counter "></div>
-                                    <h4 class="white-text">Asortiman proizvoda</h4>
-                                    <p class="white-text">Nudimo širok asortiman čajeva sopstvene proizvodnje.</p>
+                                    <h4>Asortiman proizvoda</h4>
+                                    <p>Nudimo širok asortiman čajeva sopstvene proizvodnje.</p>
                                 </div>
                             </li>
                         </ul>
@@ -184,9 +221,9 @@
         </section>
 
         <!-- Our Projects-->
-        <section class="section section-lg bg-gray-100 text-center " >
+        <section class="section section-lg bg-gray-100 text-center " id="proizvod ">
             <div class="container-fluid ">
-                <h2 id="proizvod ">šta mi nudimo ?</h2>
+                <h2>šta mi nudimo ?</h2>
                 <!--<ul class="slick-slider-project-filter " id="slick-filter-1 " data-filter-parent="#slick-slider-main-1 ">
                     <li><a class="active " href="# " data-value=".slide ">sve</a></li>
                     <li><a href="# " data-value=".darkTea ">Nonbak </a></li>
@@ -248,62 +285,34 @@
                     <div class="col-lg-8 ">
                         <div class="block-md text-center ">
                             <h3>Kontaktirajte nas</h3>
-                            <form class="rd-form rd-mailform" id="form1" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
-                                <div class="row row-20">
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input" id="name" type="text" name="name" data-constraints="@Required">
-                                            <label class="form-label" for="name">Ime</label>
+                            <form class="rd-form rd-mailform " data-form-output="form-output-global " data-form-type="contact " method="post " action="bat/rd-mailform.php ">
+                                <div class="row row-20 ">
+                                    <div class="col-md-6 ">
+                                        <div class="form-wrap ">
+                                            <input class="form-input " id="contact-name " type="text " name="name " data-constraints="@Required ">
+                                            <label class="form-label " for="contact-name ">Your Name</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input" id="lastname" type="text" name="lastname" data-constraints="@Required">
-                                            <label class="form-label" for="lastname">Prezime</label>
+                                    <div class="col-md-6 ">
+                                        <div class="form-wrap ">
+                                            <input class="form-input " id="contact-phone " type="text " name="phone " data-constraints="@Numeric ">
+                                            <label class="form-label " for="contact-phone ">Phone</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input" id="phone" type="text" name="phone" data-constraints="@Numeric">
-                                            <label class="form-label" for="phone">Telefon</label>
+                                    <div class="col-12 ">
+                                        <div class="form-wrap ">
+                                            <label class="form-label " for="contact-message ">Your Message</label>
+                                            <textarea class="form-input " id="contact-message " name="message " data-constraints="@Required "></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input" id="email" type="email" name="email" data-constraints="@Email @Required">
-                                            <label class="form-label" for="email">E-mail</label>
+                                    <div class="col-md-6 ">
+                                        <div class="form-wrap ">
+                                            <input class="form-input " id="contact-email " type="email " name="email " data-constraints="@Email @Required ">
+                                            <label class="form-label " for="contact-email ">E-mail</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="form-wrap">
-                                            <select class="form-input" id="product" name="product" data-constraints="@Required">
-                                                <option>Kliknite da bi ste izabrali proizvod</option>
-                                                <option value="1">Nonbak</option>
-                                                <option value="2">PostKovid</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-wrap">
-                                            <select class="form-input" id="referal" name="referal">
-                                                <option>Kako ste saznali za proizvod</option>
-                                                <option value="1">Facebook</option>
-                                                <option value="2">Instagram</option>
-                                                <option value="3">Google</option>
-                                                <option value="4">Prijatelj</option>
-                                                <option value="5">Ranije koristili</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-wrap">
-                                            <label class="form-label" for="napomena">Napomena</label>
-                                            <textarea class="form-input" id="napomena" name="napomena"></textarea>
-                                            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="button button-block button-secondary-light" type="submit">Pošalji</button>
+                                    <div class="col-md-6 ">
+                                        <button class="button button-block button-secondary-light " type="submit ">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -377,8 +386,16 @@
                                     <h4>Vreme naručivanja</h4>
                                     <div class="list-terms ">
                                         <dl>
-                                            <dt>Ponedeljak-Nedelja:</dt>
-                                            <dd>00 - 24</dd>
+                                            <dt>Monday-Friday:</dt>
+                                            <dd>9am to 5pm</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Saturday:</dt>
+                                            <dd>10am to 2pm</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Sunday:</dt>
+                                            <dd>10am to 2pm</dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -387,13 +404,13 @@
                                 <div class="footer-classic-item ">
                                     <h4>Brzi linkovi</h4>
                                     <ul class="list-link ">
-                                        <li><a href="index.php">Početna</a>
+                                        <li><a href="index.html">Početna</a>
                                         </li>
-                                        <li><a href="#index.php#oNama">O nama</a>
+                                        <li><a href="#oNama">O nama</a>
                                         </li>
-                                        <li><a href="index.php#proizvod">Proizvodi</a>
+                                        <li><a href="#proizvod">Proizvodi</a>
                                         </li>
-                                        <li><a href="index.php#kontakt">Kontakt</a>
+                                        <li><a href="#kontakt">Kontakt</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -420,18 +437,9 @@
             </div>
         </footer>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="vendors/jquery-3.3.1.min.js"></script>
-    <script src="vendors/jquery.easing.1.3.min.js"></script>
-    <script src="venobox/venobox.min.js"></script>
     <script src="js/core.min.js ">
     </script>
     <script src="js/script.js "></script>
-    <script src="js/recaptcha.js"></script>
-    <script src="js/sweetalert.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-
-
 
     <!--LIVEDEMO_00 -->
 
