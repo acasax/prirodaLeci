@@ -4,21 +4,21 @@ $user_class = new USER();
 
 
 
-    if (isset($_REQUEST['recaptcha_response'])) {
+    ///if (isset($_REQUEST['recaptcha_response'])) {
 
         // Build POST request:
-        $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = '6LcA-KoaAAAAAO90EfGBnbOFvRyxtcgkFmFmzjrs';
-        $recaptcha_response = $_POST['recaptcha_response'];
+        ///$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+        ///$recaptcha_secret = '6LcA-KoaAAAAAO90EfGBnbOFvRyxtcgkFmFmzjrs';
+        ///$recaptcha_response = $_POST['recaptcha_response'];
 
         // Make and decode POST request:
-        $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+        ///$recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
         // echo $recaptcha;
-        $recaptcha = json_decode($recaptcha);
+        ///$recaptcha = json_decode($recaptcha);
 
 
         // Take action based on the score returned:
-        if ($recaptcha->score >= 0.5) {
+        ///if ($recaptcha->score >= 0.5) {
             if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST['phone']) && isset($_REQUEST['email']) && isset($_REQUEST['product'])) {
 
                 $email_to = "info@resivoje.com";
@@ -66,18 +66,18 @@ $user_class = new USER();
                 $user_class->returnJSON("ERROR","FIll all required fields.");
                 return;
             }
-        } else {
+        ///} else {
             // echo "error with recaptcha";
-             $user_class->returnJSON("ERROR",
-              "Problem with recaptcha");
-            return;
-        }
-    } else {
+            /// $user_class->returnJSON("ERROR",
+            ///  "Problem with recaptcha");
+            ///return;
+        ///}
+    ///} else {
         //echo "error with recaptcha_response";
-         $user_class->returnJSON("ERROR",
-         "Problem with recaptcha_response");
-        return;
-    }
+         ///$user_class->returnJSON("ERROR",
+         ///"Problem with recaptcha_response");
+        ///return;
+    ///}
 
 
 ?>

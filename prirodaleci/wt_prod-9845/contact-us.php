@@ -183,7 +183,7 @@
                         <div class="block-md text-center">
                             <h3>Get in Touch</h3>
                             <p>We are available 24/7 by fax, e-mail or by phone. You can also use our quick contact form to ask a question about our services and products we offer.</p>
-                            <form class="rd-form rd-mailform" id="form" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
+                            <form class="rd-form rd-mailform" id="form1" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
                                 <div class="row row-20">
                                     <div class="col-md-6">
                                         <div class="form-wrap">

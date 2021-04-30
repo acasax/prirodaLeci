@@ -44,6 +44,14 @@
     color: #ffffff;
 }
 
+body {
+    background-color: white;
+}
+
+option:hover {
+    background-color: yellow;
+}
+
 a:focus,
 button:focus {
     outline: none !important;
@@ -16839,3 +16847,5 @@ html#ecwid_html body#ecwid_body .ec-size.ec-size--m .ec-store .details-gallery__
 }
 
 .product_section {}
+
+.tea-product {}
