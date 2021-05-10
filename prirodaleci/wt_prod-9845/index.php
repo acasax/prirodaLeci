@@ -25,7 +25,6 @@
             position: relative;
             z-index: 1;
         }
-        
         html.ie-10 .ie-panel,
         html.lt-ie-10 .ie-panel {
             display: block;
@@ -60,7 +59,7 @@
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
                                 <div class="rd-navbar-brand">
-                                    <a class="brand" href="index.html"><img src="images/logo-invert.png" alt="" width="166" height="57" /></a>
+                                    <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
@@ -73,7 +72,7 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#proizvod">Proizvodi</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.php">Kontakt</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -85,7 +84,7 @@
         </header>
         <!-- Swiper Slider-->
         <section class="section swiper-container swiper-modern">
-        <video src="images/video.mp4" autoplay width="100%" controls>
+        <video src="images/video.mp4" autoplay loop width="100%" controls>
         </video>
         </section>
         <!-- Services Box-->
@@ -183,9 +182,9 @@
         </section>
 
         <!-- Our Projects-->
-        <section class="section section-lg bg-gray-100 text-center " >
+        <section class="section section-lg bg-gray-100 text-center " id="proizvod">
             <div class="container-fluid ">
-                <h2 id="proizvod ">šta mi nudimo ?</h2>
+                <h2>šta mi nudimo ?</h2>
                 <!--<ul class="slick-slider-project-filter " id="slick-filter-1 " data-filter-parent="#slick-slider-main-1 ">
                     <li><a class="active " href="# " data-value=".slide ">sve</a></li>
                     <li><a href="# " data-value=".darkTea ">Nonbak </a></li>
@@ -200,6 +199,7 @@
                                 <div class="project-data-content ">
                                     <h5 class="project-data-title ">Nonbak</h5>
                                     <p class="project-data-text ">Čaj protiv bakterija.</p>
+                                    <button class="button button-block button-secondary-light">Naruči odmah</button>
                                 </div>
                             </a>
                         </div>
@@ -209,11 +209,10 @@
                                 <div class="project-data-content ">
                                     <h5 class="project-data-title ">Postkovid</h5>
                                     <p class="project-data-text ">Oporavak posle kovida</p>
+                                    <button class="button button-block button-secondary-light">Naruči odmah</button>
                                 </div>
-                            </a>
+                            </a> 
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -224,16 +223,16 @@
                 <div class="container ">
                     <div class="row row-30 row-list-bordered align-items-center ">
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/brands-white-01-127x90.png " alt=" " width="127 " height="90 " /></a>
+                            <a class="brands " href="# "><img src="images/nonbak logo.png " alt=" " width="127 " height="90 " /></a>
                         </div>
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/brands-white-02-126x72.png " alt=" " width="126 " height="72 " /></a>
+                            <a class="brands " href="# "><img src="images/covid logo.png " alt=" " width="126 " height="72 " /></a>
                         </div>
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/brands-white-03-112x106.png " alt=" " width="112 " height="106 " /></a>
+                            <a class="brands " href="# "><img src="images/alegrano logo.png " alt=" " width="112 " height="106 " /></a>
                         </div>
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/brands-white-04-126x87.png " alt=" " width="126 " height="87 " /></a>
+                            <a class="brands " href="# "><img src="images/imunoplus logo.png " alt=" " width="126 " height="87 " /></a>
                         </div>
                     </div>
                 </div>
@@ -241,7 +240,7 @@
         </section>
 
         <!-- Company News-->
-        <section class="section section-lg bg-default " id="kontakt ">
+        <section class="section section-lg bg-default " id="kontakt">
             <div class="container ">
                 <div class="row align-items-md-center row-30 ">
                     <div class="col-lg-8 ">
@@ -303,7 +302,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="button button-block button-secondary-light" type="submit">Pošalji</button>
+                                        <button class="button button-block-form button-secondary-light" type="submit">Pošalji</button>
                                     </div>
                                 </div>
                             </form>
@@ -389,11 +388,11 @@
                                     <ul class="list-link ">
                                         <li><a href="index.php">Početna</a>
                                         </li>
-                                        <li><a href="#index.php#oNama">O nama</a>
+                                        <li><a href="#oNama">O nama</a>
                                         </li>
-                                        <li><a href="index.php#proizvod">Proizvodi</a>
+                                        <li><a href="#proizvod">Proizvodi</a>
                                         </li>
-                                        <li><a href="index.php#kontakt">Kontakt</a>
+                                        <li><a href="#kontakt">Kontakt</a>
                                         </li>
                                     </ul>
                                 </div>

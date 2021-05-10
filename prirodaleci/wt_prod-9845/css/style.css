@@ -4320,6 +4320,11 @@ hr {
 
 .button-block {
     display: block;
+    width: 30%;
+}
+
+.button-block-form {
+    display: block;
     width: 100%;
 }
 
