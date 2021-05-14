@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="css/responsive.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <style>
         .ie-panel {
             display: none;
@@ -41,7 +43,6 @@
             <div class="cssload-container">
                 <div class="cssload-speeding-wheel"></div>
             </div>
-            <p>Loading...</p>
         </div>
     </div>
     <div class="page">
@@ -58,8 +59,8 @@
                                 <!-- RD Navbar Toggle-->
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
-                                <div class="rd-navbar-brand">
-                                    <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
+                                <div class="rd-navbar-brand" id="logo-header">
+                                <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
@@ -74,6 +75,8 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
                                         </li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="adminpanel/index.php">Kupovina</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -84,7 +87,7 @@
         </header>
         <!-- Swiper Slider-->
         <section class="section swiper-container swiper-modern">
-        <video src="images/video.mp4" autoplay loop width="100%" controls>
+        <video src="images/resivojesax.mp4" id="video" autoplay loop width="100%" controls>
         </video>
         </section>
         <!-- Services Box-->
@@ -97,7 +100,7 @@
                             </div>
                             <h4>Ponuda</h4>
                             <p>U našoj prodavnici možete kupiti različite vrste posuđa i pribora za Vaše uživanje u čaju.</p>
-                        </div><a class="box-services-full-width-button" href="#proizvod">Više</a>
+                        </div><a class="box-services-full-width-button" href="adminpanel/index.php">Naruči odmah</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4">
@@ -108,7 +111,7 @@
                             <h4>Kolekcija čajeva</h4>
                             <p>Imamo redovno ažurirani asortiman čajeva za prave ljubitelje. Svi čajevi su sveže upakovani i odmah isporučeni.</p>
                         </div>
-                        <a class="box-services-full-width-button" href="#proizvod">Više</a>
+                        <a class="box-services-full-width-button" href="adminpanel/index.php">Naruči odmah</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 ">
@@ -118,7 +121,7 @@
                             </div>
                             <h4>Pokloni</h4>
                             <p>Tražite poklon koji će ceniti pravi ljubitelj čaja? Na našoj stranici možete pronaći tačne informacije o čajevima.</p>
-                        </div><a class="box-services-full-width-button " href="#proizvod">Više</a>
+                        </div><a class="box-services-full-width-button " href="adminpanel/index.php">Naruči odmah</a>
                     </div>
                 </div>
 
@@ -133,7 +136,7 @@
                 </div>
                 <div class="row row-30 ">
                     <div class="col-lg-6 d-flex align-items-center">
-                        <div class="video " data-lightgallery="group "><img src="images/logozavideo.jpeg" alt=" " width="569 " height="488 " />
+                        <div class="video " data-lightgallery="group "><img src="images/1logo1.png" alt=" " width="569 " height="488 " />
                         </div>
                     </div>
                     <div class="col-lg-6 ">
@@ -182,43 +185,105 @@
         </section>
 
         <!-- Our Projects-->
-        <section class="section section-lg bg-gray-100 text-center " id="proizvod">
-            <div class="container-fluid ">
-                <h2>šta mi nudimo ?</h2>
-                <!--<ul class="slick-slider-project-filter " id="slick-filter-1 " data-filter-parent="#slick-slider-main-1 ">
-                    <li><a class="active " href="# " data-value=".slide ">sve</a></li>
-                    <li><a href="# " data-value=".darkTea ">Nonbak </a></li>
-                    <li><a href="# " data-value=".greenTea ">postkovid</a></li>
-                     <li><a href="# " data-value=".whiteTea ">White tea</a></li>
-                </ul>-->
-                <div>
-                    <div class="slick-slider slick-slider-project-main " id="slick-slider-main-1 " data-filter="#slick-filter-1 " data-slide-to-scroll="1 " data-arrows="true " data-loop="true " data-dots="false " data-swipe="true " data-draggable="true
-                            " data-items="1 " data-sm-items="1 " data-md-items="2 " data-lg-items="3 " data-xl-items="2 " data-custom-arrows="true ">
-                        <div class="slide darkTea ">
-                            <a class="project-data venobox vbox-item" href="images/3.png" data-gall="gallery01"><img src="images/3.png" alt=" " width="420 " height="357 " />
-                                <div class="project-data-content ">
-                                    <h5 class="project-data-title ">Nonbak</h5>
-                                    <p class="project-data-text ">Čaj protiv bakterija.</p>
-                                    <button class="button button-block button-secondary-light">Naruči odmah</button>
-                                </div>
-                            </a>
-                        </div>
+        <section class="section section-lg bg-gray-100 text-center" id="proizvod">
+        <h2 style="margin-bottom:50px;">šta mi nudimo ?</h2>
+        <div class="row d-flex justify-content-center">
 
-                        <div class="slide darkTea ">    
-                            <a class="project-data venobox" href="images/2.png" data-gall="gallery01"><img src="images/2.png" alt=" " width="420 " height="357 " />
-                                <div class="project-data-content ">
-                                    <h5 class="project-data-title ">Postkovid</h5>
-                                    <p class="project-data-text ">Oporavak posle kovida</p>
-                                    <button class="button button-block button-secondary-light">Naruči odmah</button>
+                        <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="nonbak_product">
+                            <div class="img-block">
+                                <a class="thumbnail">
+                                    <img class="first-img" src="images/3.png" alt="" />
+                                </a>
+                                <div class="quick-view">
+                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="ion-ios-search-strong"></i>
+                                    </a>
                                 </div>
-                            </a> 
+                            </div>
+                            <ul class="product-flag">
+                                <li class="new">Novo</li>
+                            </ul>
+                            <div class="product-decs">
+                                <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
+                                <h2><a class="product-link">Nonbak</a></h2>
+                                <div class="rating-product">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                </div>
+                                <div class="pricing-meta">
+                                    <ul>
+                                        <li class="old-price">€18.90</li>
+                                        <li class="current-price">€15.12</li>
+                                        <li class="discount-price">-20%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="add-to-link background-transparent">
+                                <ul>
+                                    <li class="cart background-transparent"><a class="cart-btn" href="adminpanel/index.php">KUPI ODMAH </a></li>
+                                    <!--<li>
+                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i></a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </article>
+                        <div class="col-1"></div>
+
+                        <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="postkovid_product">
+                            <div class="img-block">
+                                <a class="thumbnail">
+                                    <img class="first-img" src="images/2.png" alt="" />
+                                    <img class="second-img" src="assets/images/product-image/organic/product-15.jpg" alt="" />
+                                </a>
+                                <div class="quick-view">
+                                    <a class="quick_view" href="#" data-link-action="quickview" title="" data-toggle="modal" data-target="#exampleModal">
+                                        <img src="images/loupe.png"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="product-flag">
+                                <li class="new">Novo</li>
+                            </ul>
+                            <div class="product-decs">
+                                <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
+                                <h2><a href="single-product.html" class="product-link">PostKovid</a></h2>
+                                <div class="rating-product">
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                    <i class="ion-android-star"></i>
+                                </div>
+                                <div class="pricing-meta">
+                                    <ul>
+                                        <!--<li class="old-price">1800,00 RSD</li>-->
+                                        <li class="current-price">1.800,00 RSD</li>
+                                        <!--<li class="discount-price">-20%</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="add-to-link background-transparent">
+                                <ul>
+                                    <li class="cart background-transparent"><a class="cart-btn" href="adminpanel/index.php">KUPI ODMAH </a></li>
+                                    <!--<li>
+                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i></a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </article>
                         </div>
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- Section Brands-->
-        <section class="parallax-container section " data-parallax-img="images/bg-image-01-1920x1100.jpg ">
+        <section class="parallax-container section " data-parallax-img="images/pozadina-cajevi-ikonice.jpg">
             <div class="parallax-content section-lg parallax-dark context-dark dark-layout ">
                 <div class="container ">
                     <div class="row row-30 row-list-bordered align-items-center ">
@@ -250,54 +315,32 @@
                                 <div class="row row-20">
                                     <div class="col-md-6">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="name" type="text" name="name" data-constraints="@Required">
+                                            <input class="form-input form-control" id="name" type="text" name="name" onblur="$(this).valid()">
                                             <label class="form-label" for="name">Ime</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="lastname" type="text" name="lastname" data-constraints="@Required">
+                                            <input class="form-input form-control" id="lastname" type="text" name="lastname" onblur="$(this).valid()">
                                             <label class="form-label" for="lastname">Prezime</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="phone" type="text" name="phone" data-constraints="@Numeric">
+                                            <input class="form-input form-control" id="phone" type="text" name="phone" onblur="$(this).valid()"> 
                                             <label class="form-label" for="phone">Telefon</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="email" type="email" name="email" data-constraints="@Email @Required">
+                                            <input class="form-input form-control" id="email" type="email" name="email" onblur="$(this).valid()">
                                             <label class="form-label" for="email">E-mail</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-wrap">
-                                            <label for="product">Odaberite proizvod</label>
-                                            <select class="form-input" id="product" name="product" data-constraints="@Required">
-                                                <option></option>
-                                                <option value="1">Nonbak</option>
-                                                <option value="2">PostKovid</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-wrap">
-                                            <select class="form-input" id="referal" name="referal">
-                                                <option></option>
-                                                <option value="1">Facebook</option>
-                                                <option value="2">Instagram</option>
-                                                <option value="3">Google</option>
-                                                <option value="4">Prijatelj</option>
-                                                <option value="5">Ranije koristili</option>
-                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-wrap">
                                             <label class="form-label" for="napomena">Napomena</label>
-                                            <textarea class="form-input" id="napomena" name="napomena"></textarea>
+                                            <textarea class="form-input form-control" id="napomena" name="napomena" onblur="$(this).valid()"></textarea>
                                             <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                                         </div>
                                     </div>
@@ -430,6 +473,8 @@
     <script src="js/sweetalert.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 
 
 
@@ -448,6 +493,9 @@
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/plugins.min.js"></script>
 
     <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69 " height="0 " width="0 " style="display:none;visibility:hidden "></iframe></noscript>
     <script>

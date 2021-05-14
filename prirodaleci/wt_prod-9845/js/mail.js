@@ -17,12 +17,15 @@ $(document).ready(function() {
                     email: true
                 },
                 phone: {
-                    required: true,
+                    required: true
                 },
                 napomena: {
-                    required: false,
+                    required: false
                 },
                 product: {
+                    required: true
+                },
+                referal: {
                     required: true
                 }
             },
@@ -42,6 +45,9 @@ $(document).ready(function() {
                 },
                 product: {
                     required: 'Izaberite proizvod.'
+                },
+                referal: {
+                    required: 'Kako ste saznali za prirodaleči?'
                 }
             },
             submitHandler: function submitHandler(form) {
@@ -308,9 +314,9 @@ $(document).ready(function() {
         })
     }
 
-    $('.venobox').venobox();
+    //$('.venobox').venobox();
 
-    $('.venobox_custom').venobox({
+    /*$('.venobox_custom').venobox({
         framewidth: '400px', // default: ''
         frameheight: '300px', // default: ''
         border: '10px', // default: '0'
@@ -319,5 +325,5 @@ $(document).ready(function() {
         numeratio: true, // default: false
         infinigall: true, // default: false
         share: ['facebook', 'twitter', 'download'] // default: []
-    });
+    });*/
 });

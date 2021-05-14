@@ -48,7 +48,7 @@ $user_class = new USER();
                 $email_message .= "Proizvod: " . clean_string($product) . "\n";
                 $email_message .= "Kako je saznao/la: " . clean_string($referal) . "\n";
                 $email_message .= "Napomena:" . clean_string($napomena) . "\n";
-
+                echo $name, $lastname, $phone, $email, $product, $referal, $napomena;   
 
 
                 $headers = 'From: ' . $email . "\r\n" .
