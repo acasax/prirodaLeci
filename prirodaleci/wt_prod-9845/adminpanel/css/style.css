@@ -90,6 +90,7 @@ hr {
 .container {
     max-width: 1270px;
     width: 94%;
+    color: white;
 }
 
 
@@ -1436,7 +1437,7 @@ App section
 ============================*/
 
 footer {
-    background: url(../images/pattern.png)center repeat;
+    background: url(../../images/bg-footer-1-1920x725.jpg) cover;
     padding: 90px 0;
     z-index: 1;
     position: relative;
@@ -2740,4 +2741,8 @@ a[aria-expanded=false] .fa-angle-down {
 
 .product-card {
     height: 800px;
+}
+
+.footer-text{
+    color: white !important ;
 }

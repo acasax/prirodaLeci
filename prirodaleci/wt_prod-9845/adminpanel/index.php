@@ -21,7 +21,10 @@ session_start(); //start temp session until logout/browser closed
     <link href="css/animsition.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet"> </head>
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/fonts.css">
+    </head>
 
 <body class="home">
     
@@ -168,87 +171,67 @@ session_start(); //start temp session until logout/browser closed
             <div class="container">
                 <!-- top footer statrs -->
                 <div class="row top-footer">
-                    <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
-                        <a href="#"> <img src="images/food-picky-logo.png" alt="Footer logo"> </a> <span>Order Delivery &amp; Take-Out </span> </div>
-                    <div class="col-xs-12 col-sm-2 about color-gray">
-                        <h5>About Us</h5>
-                        <ul>
-                            <li><a href="#">About us</a> </li>
-                            <li><a href="#">History</a> </li>
-                            <li><a href="#">Our Team</a> </li>
-                            <li><a href="#">We are hiring</a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-2 how-it-works-links color-gray">
-                        <h5>How it Works</h5>
-                        <ul>
-                            <li><a href="#">Enter your location</a> </li>
-                            <li><a href="#">Choose restaurant</a> </li>
-                            <li><a href="#">Choose meal</a> </li>
-                            <li><a href="#">Pay via credit card</a> </li>
-                            <li><a href="#">Wait for delivery</a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-2 pages color-gray">
-                        <h5>Pages</h5>
-                        <ul>
-                            <li><a href="#">Search results page</a> </li>
-                            <li><a href="#">User Sing Up Page</a> </li>
-                            <li><a href="#">Pricing page</a> </li>
-                            <li><a href="#">Make order</a> </li>
-                            <li><a href="#">Add to cart</a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 popular-locations color-gray">
-                        <h5>Popular locations</h5>
-                        <ul>
-                            <li><a href="#">Sarajevo</a> </li>
-                            <li><a href="#">Split</a> </li>
-                            <li><a href="#">Tuzla</a> </li>
-                            <li><a href="#">Sibenik</a> </li>
-                            <li><a href="#">Zagreb</a> </li>
-                            <li><a href="#">Brcko</a> </li>
-                            <li><a href="#">Beograd</a> </li>
-                            <li><a href="#">New York</a> </li>
-                            <li><a href="#">Gradacac</a> </li>
-                            <li><a href="#">Los Angeles</a> </li>
-                        </ul>
-                    </div>
+                    <div class="col-xs-12 col-sm-3 col-lg-4 footer-logo-block color-gray">
+                        <a href="#"> <img src="../images/logo-half-color-small.png" alt="Footer logo"> </a> <span>Order Delivery &amp; Take-Out </span> </div>
+                        <div class="col-sm-6 col-lg-2 ">
+                                <div class="footer-classic-item footer-text">
+                                    <h4>Društvene mreže</h4>
+                                    <ul class="list-inline list-inline-xs list-inline-middle ">
+                                        <li>
+                                            <a class="icon-square fa-instagram " href="# "></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-square fa-facebook-f " href="# "></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-square fa-twitter " href="# "></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-square fa-google-plus " href="# "></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 ">
+                                <div class="footer-classic-item ">
+                                    <h4>Vreme naručivanja</h4>
+                                    <div class="list-terms ">
+                                        <dl>
+                                            <dt>Ponedeljak-Nedelja:</dt>
+                                            <dd>00 - 24</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 ">
+                                <div class="footer-classic-item ">
+                                    <h4>Brzi linkovi</h4>
+                                    <ul class="list-link ">
+                                        <li><a href="index.php">Početna</a>
+                                        </li>
+                                        <li><a href="#oNama">O nama</a>
+                                        </li>
+                                        <li><a href="#proizvod">Proizvodi</a>
+                                        </li>
+                                        <li><a href="#kontakt">Kontakt</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 ">
+                                <div class="footer-classic-item ">
+                                    <h4>Contacts</h4>
+                                    <ul class="list-contacts ">
+                                        <li class="centered "><span class="icon icon-lg icon-secondary mdi mdi-cellphone-android "></span><a class="link-phone " href="tel:# ">+1 (409) 987–5874</a></li>
+                                        <li class="centered "><span class="icon icon-lg icon-secondary mdi mdi-email-outline "></span><a href="mailto:# ">info@demolink.org</a></li>
+                                        <li><span class="icon icon-xl icon-secondary mdi mdi-map-marker "></span><a href="# ">Washington, USA 6036 Richmond hwy., Alexandria, VA, 2230</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                 </div>
                 <!-- top footer ends -->
                 <!-- bottom footer statrs -->
-                <div class="bottom-footer">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 payment-options color-gray">
-                            <h5>Payment Options</h5>
-                            <ul>
-                                <li>
-                                    <a href="#"> <img src="images/paypal.png" alt="Paypal"> </a>
-                                </li>
-                                <li>
-                                    <a href="#"> <img src="images/mastercard.png" alt="Mastercard"> </a>
-                                </li>
-                                <li>
-                                    <a href="#"> <img src="images/maestro.png" alt="Maestro"> </a>
-                                </li>
-                                <li>
-                                    <a href="#"> <img src="images/stripe.png" alt="Stripe"> </a>
-                                </li>
-                                <li>
-                                    <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 address color-gray">
-                            <h5>Address</h5>
-                            <p>Concept design of oline food order and deliveye,planned as restaurant directory</p>
-                            <h5>Phone: <a href="tel:+080000012222">080 000012 222</a></h5> </div>
-                        <div class="col-xs-12 col-sm-5 additional-info color-gray">
-                            <h5>Addition informations</h5>
-                            <p>Join the thousands of other restaurants who benefit from having their menus on TakeOff</p>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- bottom footer ends -->
             </div>
         </footer>
