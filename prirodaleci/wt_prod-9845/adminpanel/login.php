@@ -57,7 +57,7 @@ if(isset($_POST['submit']))   // if button is submit
 <!-- Button Mixin-->
 <!-- Pen Title-->
 <div class="pen-title">
-  <h1>Login Form</h1>
+  <h1>Prijava</h1>
 </div>
 <!-- Form Module-->
 <div class="module form-module">
@@ -65,17 +65,17 @@ if(isset($_POST['submit']))   // if button is submit
    
   </div>
   <div class="form">
-    <h2>Login to your account</h2>
+    <h2>Prijavite se na Vaš nalog</h2>
 	  <span style="color:red;"><?php echo $message; ?></span> 
    <span style="color:green;"><?php echo $success; ?></span>
     <form action="" method="post">
-      <input type="text" placeholder="Username"  name="username"/>
-      <input type="password" placeholder="Password" name="password"/>
-      <input type="submit" id="buttn" name="submit" value="login" />
+      <input type="text" placeholder="Korisničko ime"  name="username"/>
+      <input type="password" placeholder="Šifra" name="password"/>
+      <input type="submit" id="buttn" name="submit" value="Prijava" />
     </form>
   </div>
   
-  <div class="cta">Not registered?<a href="registration.php" style="color:#f30;"> Create an account</a></div>
+  <div class="cta">Nemate nalog?<a href="registration.php" style="color:#f30;"> Registrujte se</a></div>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 

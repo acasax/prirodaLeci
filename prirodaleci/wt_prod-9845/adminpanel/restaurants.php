@@ -13,7 +13,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>Proizvodi</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -32,21 +32,21 @@ session_start();
                     <a class="navbar-brand" href="index.php"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="index.php">Početna <span class="sr-only"></span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="restaurants.php">Proizvodi <span class="sr-only"></span></a> </li>
                             
 							<?php
 						if(empty($_SESSION["user_id"]))
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active text-white">Prijava</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active text-white">Registracija</a> </li>';
 							}
 						else
 							{
 									
 									
-										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">Vaše narudžbine</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Odjava</a> </li>';
 							}
 
 						?>
@@ -63,9 +63,9 @@ session_start();
                 <div class="container">
                     <ul class="row links">
                        
-                        <li class="col-xs-12 col-sm-4 link-item active"><span>1</span><a href="restaurants.php">Choose Restaurant</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item"><span>2</span><a href="#">Pick Your favorite food</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item"><span>3</span><a href="#">Order and Pay online</a></li>
+                        <li class="col-xs-12 col-sm-4 link-item active"><span>1</span><a href="restaurants.php">Odaberite proizvod</a></li>
+                        <li class="col-xs-12 col-sm-4 link-item"><span>2</span><a href="#">Naručite</a></li>
+                        <li class="col-xs-12 col-sm-4 link-item"><span>3</span><a href="#">Završetak narudžbine</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,8 +90,8 @@ session_start();
                         <div class="col-xs-12 col-sm-5 col-md-5 col-lg-3">
                           
                           
-                            <div class="widget clearfix">
-                                <!-- /widget heading -->
+                            <!--<div class="widget clearfix">
+                                <!- /widget heading ->
                                 <div class="widget-heading">
                                     <h3 class="widget-title text-dark">
                                  Popular tags
@@ -120,7 +120,7 @@ session_start();
                                     </a> </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>-->
                             <!-- end:Widget -->
                         </div>
                         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">

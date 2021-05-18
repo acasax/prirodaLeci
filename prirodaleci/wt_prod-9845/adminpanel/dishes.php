@@ -35,29 +35,31 @@ include_once 'product-action.php'; //including controller
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                    <a class="navbar-brand" href="index.php"> <img class="img-rounded" src="../images/logo-half-color-small.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
-                       <ul class="nav navbar-nav">
-                            <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item"> <a class="nav-link active text-white" href="index.php">Početna <span class="sr-only"></span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="restaurants.php">Proizvodi <span class="sr-only"></span></a> </li>
                             
+                           
 							<?php
-						if(empty($_SESSION["user_id"]))
+						if(empty($_SESSION["user_id"])) // if user is not login
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active text-white">Prijava</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active text-white">Registracija</a> </li>';
 							}
 						else
 							{
+									//if user is login
 									
-									
-										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active text-white">Vaše narudžbine</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active text-white">Odjava</a> </li>';
 							}
 
 						?>
 							 
                         </ul>
+						 
                     </div>
                 </div>
             </nav>
@@ -68,10 +70,8 @@ include_once 'product-action.php'; //including controller
             <div class="top-links">
                 <div class="container">
                     <ul class="row links">
-                      
-                        <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="restaurants.php">Choose Restaurant</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item active"><span>2</span><a href="dishes.php?res_id=<?php echo $_GET['res_id']; ?>">Pick Your favorite food</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item"><span>3</span><a href="#">Order and Pay online</a></li>
+                        <li class="col-xs-12 col-sm-6 link-item active"><span>1</span><a href="dishes.php?res_id=<?php echo $_GET['res_id']; ?>">Odaberite proizvod(e)</a></li>
+                        <li class="col-xs-12 col-sm-6 link-item"><span>2</span><a href="#">Završetak narudžbine</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,7 +129,7 @@ include_once 'product-action.php'; //including controller
                          <div class="widget widget-cart">
                                 <div class="widget-heading">
                                     <h3 class="widget-title text-dark">
-                                 Your Shopping Cart
+                                 Vaša korpa
                               </h3>
 							  				  
 							  
@@ -154,7 +154,7 @@ foreach ($_SESSION["cart_item"] as $item)  // fetch items define current into se
 										
                                         <div class="form-group row no-gutter">
                                             <div class="col-xs-8">
-                                                 <input type="text" class="form-control b-r-0" value=<?php echo "$".$item["price"]; ?> readonly id="exampleSelect1">
+                                                 <input type="text" class="form-control b-r-0" value=<?php echo $item["price"] ."RSD"; ?> readonly id="exampleSelect1">
                                                    
                                             </div>
                                             <div class="col-xs-4">
@@ -176,10 +176,10 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                              
                                 <div class="widget-body">
                                     <div class="price-wrap text-xs-center">
-                                        <p>TOTAL</p>
-                                        <h3 class="value"><strong><?php echo "$".$item_total; ?></strong></h3>
-                                        <p>Free Shipping</p>
-                                        <a href="checkout.php?res_id=<?php echo $_GET['res_id'];?>&action=check"  class="btn theme-btn btn-lg">Checkout</a>
+                                        <p>UKUPNO</p>
+                                        <h3 class="value"><strong><?php echo $item_total ."RSD"; ?></strong></h3>
+                                        <p>Besplatna dostava</p>
+                                        <a href="checkout.php?res_id=<?php echo $_GET['res_id'];?>&action=check"  class="btn theme-btn btn-lg">Dalje ></a>
                                     </div>
                                 </div>
 								
@@ -195,7 +195,7 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                         <div class="menu-widget" id="2">
                             <div class="widget-heading">
                                 <h3 class="widget-title text-dark">
-                              POPULAR ORDERS Delicious hot food! <a class="btn btn-link pull-right" data-toggle="collapse" href="#popular2" aria-expanded="true">
+                              Proizvodi <a class="btn btn-link pull-right" data-toggle="collapse" href="#popular2" aria-expanded="true">
                               <i class="fa fa-angle-right pull-right"></i>
                               <i class="fa fa-angle-down pull-right"></i>
                               </a>
@@ -231,9 +231,9 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                                         </div>
                                         <!-- end:col -->
                                         <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> 
-										<span class="price pull-left" >$<?php echo $product['price']; ?></span>
+										<span class="price pull-left" ><?php echo $product['price']; ?>RSD</span>
 										  <input class="b-r-0" type="text" name="quantity"  style="margin-left:30px;" value="1" size="2" />
-										  <input type="submit" class="btn theme-btn" style="margin-left:40px;" value="Add to cart" />
+										  <input type="submit" class="btn theme-btn" style="margin-left:40px;" value="Dodaj u korpu" />
 										</div>
 										</form>
                                     </div>
@@ -256,10 +256,11 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                        
                     </div>
                     <!-- end:Bar -->
+                    <!--
                     <div class="col-xs-12 col-md-12 col-lg-3">
                         <div class="sidebar-wrap">
                            <div class="widget clearfix">
-                            <!-- /widget heading -->
+                            <!- /widget heading ->
                             <div class="widget-heading">
                                 <h3 class="widget-title text-dark">
                               Popular tags
@@ -302,13 +303,13 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                             </div>
                         </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- end:Right Sidebar -->
                 </div>
                 <!-- end:row -->
             </div>
             <!-- end:Container -->
-            <section class="app-section">
+            <!--<section class="app-section">
                 <div class="app-wrap">
                     <div class="container">
                         <div class="row text-img-block text-xs-left">
@@ -334,7 +335,7 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
             <!-- start: FOOTER -->
             <footer class="footer">
                 <div class="container">

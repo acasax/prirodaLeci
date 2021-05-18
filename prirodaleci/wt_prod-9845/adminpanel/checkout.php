@@ -24,7 +24,7 @@ else{
 						
 														mysqli_query($db,$SQL);
 														
-														$success = "Thankyou! Your Order Placed successfully!";
+														$success = "Hvala Vam! Vaša narudžbina je uspešno poslata!";
 
 														
 														
@@ -41,7 +41,7 @@ else{
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>checkout</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -58,24 +58,24 @@ else{
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="../images/logo-half-color-small.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="index.php">Početna <span class="sr-only">(current)</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="restaurants.php">Proizvodi <span class="sr-only"></span></a> </li>
                             
 							<?php
 						if(empty($_SESSION["user_id"]))
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active text-white">Prijava</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active text-white">Registracija</a> </li>';
 							}
 						else
 							{
 									
 									
-										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active text-white">Vaša narudžbina</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active text-white">Odjava</a> </li>';
 							}
 
 						?>
@@ -90,10 +90,8 @@ else{
             <div class="top-links">
                 <div class="container">
                     <ul class="row links">
-                      
-                        <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="restaurants.php">Choose Restaurant</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item "><span>2</span><a href="#">Pick Your favorite food</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item active" ><span>3</span><a href="checkout.php">Order and Pay online</a></li>
+                        <li class="col-xs-12 col-sm-6 link-item "><span>1</span><a href="#">Odaberite proizvod(e)</a></li>
+                        <li class="col-xs-12 col-sm-6 link-item active" ><span>2</span><a href="checkout.php">Završetak narudžbine</a></li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +118,7 @@ else{
                                 <div class="col-sm-12">
                                     <div class="cart-totals margin-b-20">
                                         <div class="cart-totals-title">
-                                            <h4>Cart Summary</h4> </div>
+                                            <h4>Korpa</h4> </div>
                                         <div class="cart-totals-fields">
 										
                                             <table class="table">
@@ -129,16 +127,16 @@ else{
 												 
 											   
                                                     <tr>
-                                                        <td>Cart Subtotal</td>
-                                                        <td> <?php echo "$".$item_total; ?></td>
+                                                        <td>Cena</td>
+                                                        <td> <?php echo $item_total ." RSD"; ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Shipping &amp; Handling</td>
-                                                        <td>free shipping</td>
+                                                        <td>Dostava</td>
+                                                        <td>Besplatna</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-color"><strong>Total</strong></td>
-                                                        <td class="text-color"><strong> <?php echo "$".$item_total; ?></strong></td>
+                                                        <td class="text-color"><strong>Ukupno</strong></td>
+                                                        <td class="text-color"><strong> <?php echo $item_total ." RSD"; ?></strong></td>
                                                     </tr>
                                                 </tbody>
 												
@@ -153,15 +151,15 @@ else{
                                         <ul class=" list-unstyled">
                                             <li>
                                                 <label class="custom-control custom-radio  m-b-20">
-                                                    <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Payment on delivery</span>
-                                                    <br> <span>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>
+                                                    <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Plaćanje po uzeću</span>
+                                                    <br> <span></span> </label>
                                             </li>
-                                            <li>
+                                            <!--<li>
                                                 <label class="custom-control custom-radio  m-b-10">
                                                     <input name="mod"  type="radio" value="paypal" disabled class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paypal <img src="images/paypal.jpg" alt="" width="90"></span> </label>
-                                            </li>
+                                            </li>-->
                                         </ul>
-                                        <p class="text-xs-center"> <input type="submit" onclick="return confirm('Are you sure?');" name="submit"  class="btn btn-outline-success btn-block" value="Order now"> </p>
+                                        <p class="text-xs-center"> <input type="submit" onclick="return confirm('Da li ste sigurni?');" name="submit"  class="btn btn-outline-success btn-block" value="Naruči sada"> </p>
                                     </div>
 									</form>
                                 </div>
@@ -171,33 +169,6 @@ else{
                 </div>
 				 </form>
             </div>
-            <section class="app-section">
-                <div class="app-wrap">
-                    <div class="container">
-                        <div class="row text-img-block text-xs-left">
-                            <div class="container">
-                                <div class="col-xs-12 col-sm-6  right-image text-center">
-                                    <figure> <img src="images/app.png" alt="Right Image"> </figure>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 left-text">
-                                    <h3>The Best Food Delivery App</h3>
-                                    <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery &amp; Takeout App.</p>
-                                    <div class="social-btns">
-                                        <a href="#" class="app-btn apple-button clearfix">
-                                            <div class="pull-left"><i class="fa fa-apple"></i> </div>
-                                            <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
-                                        </a>
-                                        <a href="#" class="app-btn android-button clearfix">
-                                            <div class="pull-left"><i class="fa fa-android"></i> </div>
-                                            <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <!-- start: FOOTER -->
             <footer class="footer">
                 <div class="container">

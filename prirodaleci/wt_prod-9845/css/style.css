@@ -16676,3 +16676,8 @@
             }
             
             */
+            .dugme-naruci {
+                border: 1px;
+                border-radius: 10px;
+                font-size: 25px;
+            }

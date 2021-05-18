@@ -166,24 +166,25 @@ only screen and (max-width: 760px),
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="../images/logo-half-color-small.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
+                    <ul class="nav navbar-nav">
+                            <li class="nav-item"> <a class="nav-link active text-white" href="index.php">Početna <span class="sr-only"></span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="dishes.php?res_id=48">Proizvodi <span class="sr-only"></span></a> </li>
                             
+                           
 							<?php
-						if(empty($_SESSION["user_id"]))
+						if(empty($_SESSION["user_id"])) // if user is not login
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active text-white">Prijava</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active text-white">Registracija</a> </li>';
 							}
 						else
 							{
+									//if user is login
 									
-									
-									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active text-white">Vaše narudžbine</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active text-white">Odjava</a> </li>';
 							}
 
 						?>
@@ -215,11 +216,11 @@ only screen and (max-width: 760px),
             <section class="restaurants-page">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-3">
+                        <!--<div class="col-xs-12 col-sm-5 col-md-5 col-lg-3">
                           
                           
                             <div class="widget clearfix">
-                                <!-- /widget heading -->
+                                <!- /widget heading ->
                                 <div class="widget-heading">
                                     <h3 class="widget-title text-dark">
                                  Popular tags
@@ -249,9 +250,10 @@ only screen and (max-width: 760px),
                                     </ul>
                                 </div>
                             </div>
-                            <!-- end:Widget -->
-                        </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7 ">
+                            <!- end:Widget ->
+                        </div>-->
+                        <div class="col-md-3"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 ">
                             <div class="bg-gray restaurant-entry">
                                 <div class="row">
 								
@@ -259,12 +261,12 @@ only screen and (max-width: 760px),
 						  <thead>
 							<tr>
 							
-							  <th>Item</th>
-							  <th>Quantity</th>
-							  <th>price</th>
-							   <th>status</th>
-							     <th>Date</th>
-								   <th>Action</th>
+							  <th>Proizvod</th>
+							  <th>Količina</th>
+							  <th>Cena</th>
+							   <th>Status</th>
+							     <th>Datum</th>
+								   <th>Brisanje</th>
 							  
 							</tr>
 						  </thead>
@@ -276,7 +278,7 @@ only screen and (max-width: 760px),
 						$query_res= mysqli_query($db,"select * from users_orders where u_id='".$_SESSION['user_id']."'");
 												if(!mysqli_num_rows($query_res) > 0 )
 														{
-															echo '<td colspan="6"><center>You have No orders Placed yet. </center></td>';
+															echo '<td colspan="6"><center>Nemate ni jednu narudžbinu. </center></td>';
 														}
 													else
 														{			      
@@ -286,27 +288,27 @@ only screen and (max-width: 760px),
 						
 							?>
 												<tr>	
-														 <td data-column="Item"> <?php echo $row['title']; ?></td>
-														  <td data-column="Quantity"> <?php echo $row['quantity']; ?></td>
-														  <td data-column="price">$<?php echo $row['price']; ?></td>
-														   <td data-column="status"> 
+														 <td data-column="Proizvod"> <?php echo $row['title']; ?></td>
+														  <td data-column="Količina"> <?php echo $row['quantity']; ?></td>
+														  <td data-column="Cena"><?php echo $row['price']; ?> RSD</td>
+														   <td data-column="Status"> 
 														   <?php 
 																			$status=$row['status'];
 																			if($status=="" or $status=="NULL")
 																			{
 																			?>
-																			<button type="button" class="btn btn-info" style="font-weight:bold;">Dispatch</button>
+																			<button type="button" class="btn btn-info" style="font-weight:bold;">U obradi</button>
 																		   <?php 
 																			  }
 																			   if($status=="in process")
 																			 { ?>
-																				<button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin"  aria-hidden="true" ></span>On a Way!</button>
+																				<button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin"  aria-hidden="true" ></span>Poslato</button>
 																			<?php
 																				}
 																			if($status=="closed")
 																				{
 																			?>
-																			 <button type="button" class="btn btn-success" ><span  class="fa fa-check-circle" aria-hidden="true">Delivered</button> 
+																			 <button type="button" class="btn btn-success" ><span  class="fa fa-check-circle" aria-hidden="true">Preuzeto</button> 
 																			<?php 
 																			} 
 																			?>
@@ -314,7 +316,7 @@ only screen and (max-width: 760px),
 																			if($status=="rejected")
 																				{
 																			?>
-																			 <button type="button" class="btn btn-danger"> <i class="fa fa-close"></i>cancelled</button>
+																			 <button type="button" class="btn btn-danger"> <i class="fa fa-close"></i>Otkazano</button>
 																			<?php 
 																			} 
 																			?>
@@ -325,8 +327,8 @@ only screen and (max-width: 760px),
 														   
 														   
 														   </td>
-														  <td data-column="Date"> <?php echo $row['date']; ?></td>
-														   <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a> 
+														  <td data-column="Datum"> <?php echo $row['date']; ?></td>
+														   <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Da li ste sigurni da želite otkazati narudžbinu?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a> 
 															</td>
 														 
 												</tr>
@@ -353,6 +355,7 @@ only screen and (max-width: 760px),
                           
                            
                         </div>
+                        <div class="col-md-3"></div>
                     </div>
                 </div>
             </section>

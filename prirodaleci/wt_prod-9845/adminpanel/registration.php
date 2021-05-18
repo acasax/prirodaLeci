@@ -15,7 +15,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 		empty($_POST['cpassword']) ||
 		empty($_POST['cpassword']))
 		{
-			$message = "All fields must be Required!";
+			$message = "Sva polja moraju biti popunjena!";
 		}
 	else
 	{
@@ -26,35 +26,35 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 
 	
 	if($_POST['password'] != $_POST['cpassword']){  //matching passwords
-       	$message = "Password not match";
+       	$message = "Lozinke se ne poklapaju";
     }
 	elseif(strlen($_POST['password']) < 6)  //cal password length
 	{
-		$message = "Password Must be >=6";
+		$message = "Lozinka mora imati više od 6 karaktera";
 	}
 	elseif(strlen($_POST['phone']) < 10)  //cal phone length
 	{
-		$message = "invalid phone number!";
+		$message = "Broj telefona nije validan!";
 	}
 
     elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) // Validate email address
     {
-       	$message = "Invalid email address please type a valid email!";
+       	$message = "E-mail adresa nije validna!";
     }
 	elseif(mysqli_num_rows($check_username) > 0)  //check username
      {
-    	$message = 'username Already exists!';
+    	$message = 'Korisničko ime već postoji!';
      }
 	elseif(mysqli_num_rows($check_email) > 0) //check email
      {
-    	$message = 'Email Already exists!';
+    	$message = 'E-mail već postoji!';
      }
 	else{
        
 	 //inserting values into db
 	$mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address) VALUES('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".md5($_POST['password'])."','".$_POST['address']."')";
 	mysqli_query($db, $mql);
-		$success = "Account Created successfully! <p>You will be redirected in <span id='counter'>5</span> second(s).</p>
+		$success = "Nalog je uspešno registrovan! <p>Bićete prebačeni za <span id='counter'>5</span> sekund(i).</p>
 														<script type='text/javascript'>
 														function countdown() {
 															var i = document.getElementById('counter');
@@ -103,24 +103,24 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
             <nav class="navbar navbar-dark">
                <div class="container">
                   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                  <a class="navbar-brand" href="index.php"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                  <a class="navbar-brand" href="index.php"> <img class="img-rounded" src="../images/logo-half-color-small.png" alt=""> </a>
                   <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                      <ul class="nav navbar-nav">
-							<li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
+							<li class="nav-item"> <a class="nav-link active text-white" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
+                            <li class="nav-item"> <a class="nav-link active text-white" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
                             
 							<?php
 						if(empty($_SESSION["user_id"]))
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active text-white">login</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active text-white">signup</a> </li>';
 							}
 						else
 							{
 									
 									
-										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active text-white">your orders</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active text-white">logout</a> </li>';
 							}
 
 						?>
@@ -157,35 +157,35 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 							  <form action="" method="post">
                                  <div class="row">
 								  <div class="form-group col-sm-12">
-                                       <label for="exampleInputEmail1">User-Name</label>
+                                       <label for="exampleInputEmail1">Korisničko ime</label>
                                        <input class="form-control" type="text" name="username" id="example-text-input" placeholder="UserName"> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">First Name</label>
+                                       <label for="exampleInputEmail1">Ime</label>
                                        <input class="form-control" type="text" name="firstname" id="example-text-input" placeholder="First Name"> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Last Name</label>
+                                       <label for="exampleInputEmail1">Prezime</label>
                                        <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name"> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Email address</label>
+                                       <label for="exampleInputEmail1">Email adresa</label>
                                        <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Phone number</label>
+                                       <label for="exampleInputEmail1">Broj telefona</label>
                                        <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputPassword1">Password</label>
+                                       <label for="exampleInputPassword1">Lozinka</label>
                                        <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password"> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputPassword1">Repeat password</label>
+                                       <label for="exampleInputPassword1">Ponovite lozinku</label>
                                        <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password"> 
                                     </div>
 									 <div class="form-group col-sm-12">
-                                       <label for="exampleTextarea">Delivery Address</label>
+                                       <label for="exampleTextarea">Adresa za dostavu</label>
                                        <textarea class="form-control" id="exampleTextarea"  name="address" rows="3"></textarea>
                                     </div>
                                    
@@ -205,8 +205,8 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                      </div>
                      <!-- WHY? -->
                      <div class="col-md-4">
-                        <h4>Registration is fast, easy, and free.</h4>
-                        <p>Once you"re registered, you can:</p>
+                        <h4>Registracija je brza, laka, i besplatna.</h4>
+                        <p>Jednom kada ste registrovani, možete:</p>
                         <hr>
                         <img src="http://placehold.it/400x300" alt="" class="img-fluid">
                         <p></p>
@@ -228,15 +228,15 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                            </div>
                         </div>
                         <!-- end:Panel -->
-                        <h4 class="m-t-20">Contact Customer Support</h4>
-                        <p> If you"re looking for more help or have a question to ask, please </p>
-                        <p> <a href="contact.html" class="btn theme-btn m-t-15">contact us</a> </p>
+                        <h4 class="m-t-20">Kontaktirajte korisničku podršku</h4>
+                        <p> Ukoliko Vam je potrebna još neka pomoć, ili imate neko pitanje, molimo kontaktirajte nas</p>
+                        <p> <a href="../index.php#kontakt" class="btn theme-btn m-t-15">Kontaktirajte nas</a> </p>
                      </div>
                      <!-- /WHY? -->
                   </div>
                </div>
             </section>
-            <section class="app-section">
+            <!--<section class="app-section">
                <div class="app-wrap">
                   <div class="container">
                      <div class="row text-img-block text-xs-left">
@@ -262,7 +262,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                      </div>
                   </div>
                </div>
-            </section>
+            </section>-->
             <!-- start: FOOTER -->
             <footer class="footer">
                <div class="container">

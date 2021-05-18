@@ -151,7 +151,7 @@ hr {
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-indicator {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns="http: //www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath fill="%23fff" d="M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z"/%3E%3C/svg%3E")
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath fill="%23fff" d="M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z"/%3E%3C/svg%3E")
 }
 
 .custom-control-input:active~.custom-control-indicator {
@@ -212,22 +212,22 @@ hr {
 }
 
 .theme-btn-dash {
-    border: 2px dashed #f30;
+    border: 2px dashed #5a6123;
     background-color: transparent;
-    color: #f30
+    color: #5a6123
 }
 
 .theme-btn-dash:hover,
 .theme-btn,
 .theme-btn.btn-lg:hover,
 .btn-secondary:hover {
-    background-color: #f30;
+    background-color: #5a6123;
     color: #fff;
-    border: 1px solid #f30
+    border: 1px solid #5a6123
 }
 
 .theme-btn-dash:hover {
-    border: 2px solid #f30;
+    border: 2px solid #5a6123
     color: #fff
 }
 
@@ -284,19 +284,19 @@ hr {
 }
 
 .b-l {
-    border-left: 1px solid #edeed
+    border-left: 1px solid #edeed;
 }
 
 .b-r {
-    border-left: 1px solid #edeed
+    border-left: 1px solid #edeed;
 }
 
 .b-t {
-    border-top: 1px solid #edeed
+    border-top: 1px solid #edeed;
 }
 
 .b-b {
-    border-bottom: 1px solid #edeed
+    border-bottom: 1px solid #edeed;
 }
 
 .b-b-0 {
@@ -359,7 +359,6 @@ hr {
 ============================*/
 
 #header {
-    position: fixed;
     width: 100%;
     border: 0;
     z-index: 99;
@@ -372,7 +371,7 @@ hr {
 }
 
 .navbar {
-    background-image: url("../images/menu-bg.jpg");
+    background-color: white;
     padding: .95rem 1rem;
     border-radius: 0;
 }
@@ -739,7 +738,11 @@ hr {
 
 .food-item-wrap .figure-wrap {
     position: relative;
-    height: 210px;
+    height: 600px;
+}
+
+.product-card {
+    height: 100px;
 }
 
 .food-item-wrap .food-item-wrap figure {
@@ -764,7 +767,7 @@ hr {
 
 .food-item-wrap:hover h5>a,
 .food-item-wrap:hover .right-text>a {
-    color: #f30;
+    color: #5a6123;
 }
 
 .food-item-wrap .figure-text {
@@ -789,7 +792,7 @@ hr {
 }
 
 .food-item-wrap .distance {
-    background: #f30;
+    background: #5a6123;
     border-radius: 3px;
     color: #fff;
     font-size: 12px;
@@ -1603,7 +1606,7 @@ footer li a {
 }
 
 .profile-desc .nav-item a {
-    color: #fff;
+    color: #5a6123;
 }
 
 .profile-desc .nav-item.ratings a span i {
@@ -2728,4 +2731,13 @@ a[aria-expanded=false] .fa-angle-down {
     font-weight: 600;
     padding: 0 5px;
     color: #3a3e47;
+}
+
+.text-white{
+    color: #5a6123 !important;
+    font-size: 20px;
+}
+
+.product-card {
+    height: 800px;
 }

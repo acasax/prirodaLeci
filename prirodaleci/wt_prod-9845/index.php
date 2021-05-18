@@ -169,6 +169,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                <a href="adminpanel/index.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
+                </div>
+                <div class="col-5"></div>
+            </div>
         </section>
 
         <section class="parallax-container section " data-parallax-img="images/bg-image-2-1920x754.jpg ">
