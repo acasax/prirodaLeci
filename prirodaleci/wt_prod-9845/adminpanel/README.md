@@ -1,36 +1,61 @@
-# README
+# Kiaalap admin dashboard
+Free admin dashboard template
 
-## About this project?
+# Preview
 
-This project is about ordering online food from your local restaurants. Anybody can create an account and order online. you are free to to use this project for college or school purposes. Please note that this project is not made for business or commercial purposes.
+![Kiaalap admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/kiaalap-free-bootstrap-admin-dashboard-template.jpg)
 
-![Front view](.gitbook/assets/1.png)
+# Overview
+Kiaalap is a full-featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.
 
-![Backend view](.gitbook/assets/2.png)
+It is a fully responsive bootstrap admin template/bootstrap admin dashboard template that comes with a huge collection of reusable UI components & plugins.
 
-## Installation or Demo
+We believe we have covered everything you need to set up an All kind of website.If there is something that you would like to know then we are happy to help you out.
 
-Just create new database in phpmyadmin and import SQL file which is located in `SQL/` directory. If you don't know, how to setup this project on your localhost then watch this youtube video: [https://youtu.be/aBiIgUhe0Jk](https://youtu.be/aBiIgUhe0Jk)
+# Template Features:
 
-## Admin Dashboard
+- 50+ PAGES
+- VALID HTML5 & CSS3
+- MATERIAL DESIGN
+- RESPONSIVE LAYOUT
+- 3 HOME VERSIONS
+- NEAT, CLEAN AND SIMPLE DESIGN
+- CREATIVE AND MODERN DESIGN
+- BUILT BASED ON BOOTSTRAP 3+
+- FULLY RESPONSIVE
+- CROSS BROWSER OPTIMIZATION
+- WELL COMMENTED HTML & CSS FILES
+- GOOGLE FONTS
+- GOOGLE MAP
+- C3 AND D3 CHARTS
+- PLOT CHART
+- PEITY CHARTS
+- SPARKLINES
+- CHOSEN
+- CODEMIRROR
+- COLORPICKER
+- IMAGES CROPPER
+- DATA MAP
+- DATEPICKER
+- X-EDITABLE
+- DUAL LISTBOX
+- GOOGLE MAPS
+- ICHECK
+- RANGESLIDER
+- JVECTORMAP
+- KNOB
+- MAPAEL
+- PASSWORD METER
+- PDF VIEWER
+- TOUCHSPIN
+- JSTREE
+- LOBIBOX
+- SUMMERNOTE
 
-To access admin portal type this in your URL BAR **\`root**/admin/ \`  where **root** is your root directory
+# Other resources:
 
- **Admin credentials:** Username: **admin** Password: **1234**
-
-## Technologies Used
-
-1. PHP
-2. SQL
-3. BOOTSTRAP 4
-4. AJAX
-5. JQUERY
-
-## System Requirements
-
-Software : XAMPP / Wamp / Mamp/ Lamp \(anyone\).
-
-## Want custom PHP project?
-
-If you looking for specific project for your school or college then follow me on intagram and message me there. [https://www.instagram.com/code\_lone/](https://www.instagram.com/code_lone/)
-
+- [Bootstrap Dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
+- [Angular Dashboards](https://colorlib.com/wp/angularjs-admin-templates/)
+- [Free Admin Dashboards](https://colorlib.com/wp/free-html5-admin-dashboard-templates/)
+- [Website Templates](https://colorlib.com/wp/templates/)
+- [Free WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/)
