@@ -29,8 +29,6 @@ $user_class = new USER();
                 $lastname      = $_POST['lastname'];
                 $phone      = $_POST['phone'];
                 $email    = $_POST['email'];
-                $product    = $_POST['product'];
-                $referal    = $_POST['referal'];
                 $napomena   = $_POST['napomena'];
 
 
@@ -45,10 +43,7 @@ $user_class = new USER();
                 $email_message .= "Prezime: " . clean_string($lastname) . "\n";
                 $email_message .= "Telefon: " . clean_string($phone) . "\n";
                 $email_message .= "Email: " . clean_string($email) . "\n";
-                $email_message .= "Proizvod: " . clean_string($product) . "\n";
-                $email_message .= "Kako je saznao/la: " . clean_string($referal) . "\n";
-                $email_message .= "Napomena:" . clean_string($napomena) . "\n";
-                echo $name, $lastname, $phone, $email, $product, $referal, $napomena;   
+                $email_message .= "Napomena:" . clean_string($napomena) . "\n";  
 
 
                 $headers = 'From: ' . $email . "\r\n" .

@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/sweetalert.css">
+
     <style>
         .ie-panel {
             display: none;
@@ -40,7 +43,6 @@
             <div class="cssload-container">
                 <div class="cssload-speeding-wheel"></div>
             </div>
-            <p>Loading...</p>
         </div>
     </div>
     <div class="page">
@@ -65,7 +67,7 @@
                                 <div class="rd-navbar-nav-wrap">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Početna</a>
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Početna</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#oNama">O nama</a>
                                         </li>
@@ -73,7 +75,7 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="adminpanel/index.php">Kupovina</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="product-catalog.php">Kupovina</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -96,31 +98,9 @@
         <section class="section section-lg bg-gray-100 text-center">
             <div class="container">
                 <div class="row row-50">
-                    <div class=" col-lg-2 col-xl-2"></div>
-                    <div class="col-sm-6 col-lg-4 col-xl-4">
-                        <div class="product-item">
-                            <div class="product-item-image">
-                                <a href="single-product.html"><img src="images/3.png" alt="" width="300" height="500" /></a>
-                            </div>
-                            <div class="product-item-caption">
-                                <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6>
-                                <h4 class="product-price"><span>1800,00 RSD</span><span class="old-price"></span></h4><a class="button button-secondary-light" href="shopping-cart.html">Naruči odmah</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 col-xl-4">
-                        <div class="product-item">
-                            <div class="product-item-image">
-                                <a href="single-product.html"><img src="images/2.png" alt="" width="300" height="500" /></a>
-                            </div>
-                            <div class="product-item-caption">
-                                <h6 class="product-title"><a href="single-product.html">POSTKOVID
-                                </a></h6>
-                                <h4 class="product-price"><span>1800,00 RSD </span><span class="old-price"></span></h4><a class="button button-secondary-light" href="shopping-cart.html">Naruči odmah</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-lg-2 col-xl-2"></div>
+                    <div class=" col-lg-1 col-xl-1"></div>
+                    
+                    <div class=" col-lg-1 col-xl-1"></div>
                 </div>
                 <!--<div class="pagination-media-wrap">
                     <ul class="pagination-media">
@@ -133,6 +113,86 @@
                     </ul>
                 </div>-->
             </div>
+
+            <!--Forma za narucivanje-->
+            <div class="col-lg-12 ">
+                        <div class="block-md text-center ">
+                            <form class="rd-form rd-mailform" id="orderForm" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
+                                <div class="row row-20">
+                                    <div class="col-md-6">
+                                        <div class="form-wrap">
+                                            <input class="form-input form-control" id="name" type="text" name="name" onblur="$(this).valid()">
+                                            <label class="form-label" for="name">Ime</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-wrap">
+                                            <input class="form-input form-control" id="lastname" type="text" name="lastname" onblur="$(this).valid()">
+                                            <label class="form-label" for="lastname">Prezime</label>
+                                        </div>
+                                    </div>
+                                        <div class="col-md-6">
+                                            <div class="form-wrap">
+                                                <input class="form-input form-control" id="address" type="text" name="address" onblur="$(this).valid()">
+                                                <label class="form-label" for="lastname">Adresa</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-wrap">
+                                                <input class="form-input form-control" id="zip" type="text" name="zip" onblur="$(this).valid()">
+                                                <label class="form-label" for="lastname">Poštanski broj</label>
+                                            </div>
+                                        </div>
+                                    <div class="col-md-6">
+                                        <div class="form-wrap">
+                                            <input class="form-input form-control" id="phone" type="text" name="phone" onblur="$(this).valid()"> 
+                                            <label class="form-label" for="phone">Telefon</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-wrap">
+                                            <input class="form-input form-control" id="email" type="email" name="email" onblur="$(this).valid()">
+                                            <label class="form-label" for="email">E-mail</label>
+                                        </div>
+                                    </div>
+                                    <div class=" col-lg-1 col-xl-1"></div>
+                    <div class="col-sm-6 col-lg-5 col-xl-5">
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <a href="single-product.html"><img src="images/3.png" alt="" width="300" height="500" /></a>
+                            </div>
+                            <div class="product-item-caption">
+                                <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6>
+                                <h4 class="product-price"><span>1900,00 RSD</span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-5 col-xl-5">
+                        <div class="product-item">
+                            <div class="product-item-image">
+                                <a href="single-product.html"><img src="images/2.png" alt="" width="300" height="500" /></a>
+                            </div>
+                            <div class="product-item-caption">
+                                <h6 class="product-title"><a href="single-product.html">POSTKOVID
+                                </a></h6>
+                                <h4 class="product-price"><span>1900,00 RSD </span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-12">
+                                        <div class="form-wrap">
+                                            <label class="form-label" for="napomena">Napomena</label>
+                                            <textarea class="form-input form-control" id="napomena" name="napomena" onblur="$(this).valid()"></textarea>
+                                            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="button button-block-form button-secondary-light" type="submit">Naruči</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
         </section>
         <!-- Footer Classic-->
         <footer class="footer-classic context-dark parallax-container " data-parallax-img="images/bg-footer-1-1920x725.jpg ">
@@ -208,9 +268,19 @@
         </footer>
     </div>
     <div class="snackbars" id="form-output-global"></div>
+    <script src="js/jquery.js"></script>
+    <script src="vendors/jquery-3.3.1.min.js"></script>
+    <script src="vendors/jquery.easing.1.3.min.js"></script>
     <script src="js/core.min.js">
     </script>
     <script src="js/script.js"></script>
+    <script src="js/mail.js"></script>
+    <script src="js/recaptcha.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+
     <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>
         (function(w, d, s, l, i) {

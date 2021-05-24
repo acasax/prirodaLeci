@@ -22,12 +22,6 @@ $(document).ready(function() {
                 napomena: {
                     required: false
                 },
-                product: {
-                    required: true
-                },
-                referal: {
-                    required: true
-                }
             },
             messages: {
                 name: {
@@ -43,12 +37,6 @@ $(document).ready(function() {
                 phone: {
                     required: 'Unesite Vaš broj telefona.'
                 },
-                product: {
-                    required: 'Izaberite proizvod.'
-                },
-                referal: {
-                    required: 'Kako ste saznali za prirodaleči?'
-                }
             },
             submitHandler: function submitHandler(form) {
                 event.preventDefault();
@@ -96,7 +84,7 @@ $(document).ready(function() {
         })
     }
 
-    const $registerForm1 = $('#form1')
+    const $registerForm1 = $('#orderForm')
         //let validator = void(0)
 
     if ($registerForm1.length) {
@@ -106,6 +94,12 @@ $(document).ready(function() {
                     required: true
                 },
                 lastname: {
+                    required: true
+                },
+                address: {
+                    required: true
+                },
+                zip: {
                     required: true
                 },
                 email: {
@@ -118,7 +112,10 @@ $(document).ready(function() {
                 napomena: {
                     required: false,
                 },
-                product: {
+                nonbak: {
+                    required: true
+                },
+                postkovid: {
                     required: true
                 }
             },
@@ -129,6 +126,12 @@ $(document).ready(function() {
                 lastname: {
                     required: 'Unesite Vaše prezime.',
                 },
+                address: {
+                    required: 'Unesite adresu.'
+                },
+                zip: {
+                    required: 'Unesite poštanski broj.'
+                },
                 email: {
                     required: 'Unesite Vaš email.',
                     email: 'Vaša email adresa nije validna'
@@ -136,14 +139,14 @@ $(document).ready(function() {
                 phone: {
                     required: 'Unesite Vaš broj telefona.'
                 },
-                product: {
+                nonbak: {
                     required: 'Izaberite proizvod.'
                 }
             },
             submitHandler: function submitHandler(form) {
                 event.preventDefault();
                 $.ajax({
-                    url: 'php_vendors/sendemail.php',
+                    url: 'php_vendors/sendorder.php',
                     method: 'POST',
                     data: new FormData(form),
                     contentType: false,

@@ -74,7 +74,7 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="adminpanel/index.php">Kupovina</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="product-catalog.php">Kupovina</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -99,7 +99,7 @@
                             </div>
                             <h4>Ponuda</h4>
                             <p>U našoj prodavnici možete kupiti različite vrste posuđa i pribora za Vaše uživanje u čaju.</p>
-                        </div><a class="box-services-full-width-button" href="adminpanel/index.php">Naruči odmah</a>
+                        </div><a class="box-services-full-width-button" href="product-catalog.php">Naruči odmah</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4">
@@ -110,7 +110,7 @@
                             <h4>Kolekcija čajeva</h4>
                             <p>Imamo redovno ažurirani asortiman čajeva za prave ljubitelje. Svi čajevi su sveže upakovani i odmah isporučeni.</p>
                         </div>
-                        <a class="box-services-full-width-button" href="adminpanel/index.php">Naruči odmah</a>
+                        <a class="box-services-full-width-button" href="product-catalog.php">Naruči odmah</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 ">
@@ -120,7 +120,7 @@
                             </div>
                             <h4>Pokloni</h4>
                             <p>Tražite poklon koji će ceniti pravi ljubitelj čaja? Na našoj stranici možete pronaći tačne informacije o čajevima.</p>
-                        </div><a class="box-services-full-width-button " href="adminpanel/index.php">Naruči odmah</a>
+                        </div><a class="box-services-full-width-button " href="product-catalog.php">Naruči odmah</a>
                     </div>
                 </div>
 
@@ -171,7 +171,7 @@
             <div class="row">
                 <div class="col-5"></div>
                 <div class="col-2">
-                <a href="adminpanel/index.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
+                <a href="product-catalog.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
                 </div>
                 <div class="col-5"></div>
             </div>
@@ -221,15 +221,15 @@
                                 </div>
                                 <div class="pricing-meta">
                                     <ul>
-                                        <li class="old-price">€18.90</li>
-                                        <li class="current-price">€15.12</li>
-                                        <li class="discount-price">-20%</li>
+                                        <!--<li class="old-price">1800,00 RSD</li>-->
+                                        <li class="current-price">1.900,00 RSD</li>
+                                        <!--<li class="discount-price">-20%</li>-->
                                     </ul>
                                 </div>
                             </div>
                             <div class="add-to-link background-transparent">
                                 <ul>
-                                    <li class="cart background-transparent"><a class="cart-btn" href="adminpanel/index.php">KUPI ODMAH </a></li>
+                                    <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
                                     <!--<li>
                                         <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
                                     </li>
@@ -269,14 +269,14 @@
                                 <div class="pricing-meta">
                                     <ul>
                                         <!--<li class="old-price">1800,00 RSD</li>-->
-                                        <li class="current-price">1.800,00 RSD</li>
+                                        <li class="current-price">1.900,00 RSD</li>
                                         <!--<li class="discount-price">-20%</li>-->
                                     </ul>
                                 </div>
                             </div>
                             <div class="add-to-link background-transparent">
                                 <ul>
-                                    <li class="cart background-transparent"><a class="cart-btn" href="adminpanel/index.php">KUPI ODMAH </a></li>
+                                    <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
                                     <!--<li>
                                         <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
                                     </li>

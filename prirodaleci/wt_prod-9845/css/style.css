@@ -16681,3 +16681,7 @@
                 border-radius: 10px;
                 font-size: 25px;
             }
+
+            .quantity-button {
+                text-align: center;
+            }

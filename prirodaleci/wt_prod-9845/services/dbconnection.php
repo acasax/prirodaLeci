@@ -1,13 +1,13 @@
 <?php
     $host = 'localhost';
-    $dbname = 'telekom';
+    $dbname = 'prirodaleci';
     $username = 'root';
     $password = '';
 
 
     try
     {
-     $db = new PDO('mysql:host=localhost; dbname=telekom;    charset=utf8', 'root', ''); 
+     $db = new PDO('mysql:host=localhost; dbname=prirodaleci;    charset=utf8', 'root', ''); 
        $db->setAttribute(PDO::ATTR_ERRMODE,    PDO::ERRMODE_EXCEPTION); 
        }
              catch (PDOException $ex)
