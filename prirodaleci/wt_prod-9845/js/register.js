@@ -151,7 +151,7 @@ $(document).ready(function() {
 
                                 },
                                 function(isConfirm) {
-                                    $(location).attr('href', 'index.php');
+                                    $(location).attr('href', 'adminpanel/index.php');
                                 }
                             );
 

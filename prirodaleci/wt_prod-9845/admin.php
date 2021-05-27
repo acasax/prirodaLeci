@@ -33,7 +33,6 @@
               </div>
               <input name="login-btn" id="login-btn" class="btn btn-block login-btn" type="submit" value="Prijava" tabindex="3" onblur="$(this).valid()">
             </form>
-            <p class="login-wrapper-footer-text">Nemaš profil? <a href="register.php" class="text-reset">Registruj se</a></p>
           </div>
         </div>
         <div class="col-sm-7 col-lg-6 col-md-6 px-0 d-none d-sm-block justify-content-center">

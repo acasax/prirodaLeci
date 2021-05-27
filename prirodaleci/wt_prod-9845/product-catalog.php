@@ -88,10 +88,6 @@
         <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(images/bg-image-06-1920x455.jpg);">
             <div class="container">
                 <h2 class="breadcrumbs-custom-title">Katalog proizvoda</h2>
-                <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Početna</a></li>
-                    <li class="active">Katalog proizvoda</li>
-                </ul>
             </div>
         </section>
         <section class="section section-lg bg-gray-100 text-center">
@@ -116,6 +112,7 @@
             <!--Forma za narucivanje-->
             <div class="col-lg-12 ">
                 <div class="block-md text-center ">
+                <h2 class="breadcrumbs-custom-title">Naručite lako</h2>
                     <form class="rd-form rd-mailform" id="orderForm" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
                         <div class="row row-20">
                             <div class="col-md-6">
