@@ -16680,6 +16680,7 @@
                 border: 1px;
                 border-radius: 10px;
                 font-size: 25px;
+                min-width: 335px;
             }
 
             .quantity-button {

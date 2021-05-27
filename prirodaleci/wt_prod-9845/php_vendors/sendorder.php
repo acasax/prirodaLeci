@@ -46,25 +46,76 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
     //$reg_link         = "http://localhost/v-cow/activate.php";
     //$msg              = "Aktivaciju Vašeg naloga če te izvršiti klikom na link $reg_link?email=$email&code=$validation_code";
 
-    $order_sql = "INSERT INTO orders (name, lastname, address, zip, time, phone, email, note) VALUE ('$name', '$lastname', '$address', '$zip', '$date', '$phone', '$email', '$napomena')";
-    echo $order_sql;
-    if ($db->query($order_sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-
-      };
 
 
-    //send_email($email, $subject, $msg, $headers); // proveravaj jer vraca t/f zbog poruke i dodaj na domen za proveru slanja mejla
+    $db->beginTransaction();
 
-    $user_class->returnJSON("OK", "Narudžbina poslata, hvala.");
-    /*Lik za potvrdu registracije 
-                                                      Vam je poslat na e-mail."*/
+    
 
-    return true;
+    try{
+        $order_sql = "INSERT INTO orders (name, lastname, address, zip, time, phone, email, note) VALUE ('$name', '$lastname', '$address', '$zip', '$date', '$phone', '$email', '$napomena')";
 
-    //završetak upisa
+        $stm = $db->prepare($order_sql);
+        $stm->execute();
 
+        
+        //$order_id = $db->lastInsertId();
+        $order_select = "SELECT id FROM `orders` ORDER BY id DESC LIMIT 1";
+
+        $stm1 = $db->prepare($order_select);
+        $stm1->execute();
+        $order_id = $stm1->fetch();
+
+        $object1 = (object) [
+            'name' => 'nonbak',
+            'quantity' => $nonbak,
+          ];
+
+        $object2 = (object) [
+            'name' => 'postkovid',
+            'quantity' => $postkovid,
+          ];
+
+        $array = array($object1, $object2);
+
+        foreach($array as $item){
+            $a = $item->name;
+            $b = $item->quantity;
+
+            $id = $order_id["id"];
+            if($b != 0)
+            {
+            
+            
+
+            $items_insert = "INSERT INTO order_items (fk_order, item, quantity) VALUE ($id, '$a', $b)";
+            $stm2 = $db->prepare($items_insert);
+            $stm2->execute();
+            
+            }
+            
+        }
+        
+        $db->commit();
+    }catch(mysqli_sql_exception $e) {
+        $db->rollBack();
+        throw $e; // $e cuvam u bazu - greska. (datum, naziv, id).
+        $user_class->returnJSON("ERROR","Message not sent. Please try again.");
+        return;
+    }finally{
+        $user_class->returnJSON("OK","Message sent.");
+        return;
+    }
+    
+       
+    
+        
+    
+} else {
+    //echo "nije sve setovanoi";
+    $user_class->returnJSON("ERROR","FIll all required fields.");
+    return;
+}
 
 
 
@@ -79,8 +130,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
     $email_message .= "Telefon: " . clean_string($phone) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Napomena:" . clean_string($napomena) . "\n";
-
-
+    /*
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
@@ -90,12 +140,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
     } else {
         $user_class->returnJSON("ERROR", "Message not sent. Please try again.");
         return;
-    };
-} else {
-    //echo "nije sve setovanoi";
-    $user_class->returnJSON("ERROR", "FIll all required fields.");
-    return;
-}
+    };*/
         ///} else {
             // echo "error with recaptcha";
             /// $user_class->returnJSON("ERROR",

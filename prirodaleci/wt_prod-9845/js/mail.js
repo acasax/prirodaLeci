@@ -112,12 +112,6 @@ $(document).ready(function() {
                 napomena: {
                     required: false,
                 },
-                nonbak: {
-                    required: true
-                },
-                postkovid: {
-                    required: true
-                }
             },
             messages: {
                 name: {
@@ -139,9 +133,6 @@ $(document).ready(function() {
                 phone: {
                     required: 'Unesite Vaš broj telefona.'
                 },
-                nonbak: {
-                    required: 'Izaberite proizvod.'
-                }
             },
             submitHandler: function submitHandler(form) {
                 event.preventDefault();

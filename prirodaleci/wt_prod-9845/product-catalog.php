@@ -26,7 +26,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         html.ie-10 .ie-panel,
         html.lt-ie-10 .ie-panel {
             display: block;
@@ -50,8 +50,7 @@
         <header class="section page-header page-header-sidebar">
             <!-- RD Navbar-->
             <div class="rd-navbar-wrap">
-                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-sidebar"
-                    data-xl-device-layout="rd-navbar-sidebar" data-xxl-layout="rd-navbar-sidebar" data-xxl-device-layout="rd-navbar-sidebar" data-md-stick-up-offset="80px" data-lg-stick-up-offset="46px" data-md-stick-up="true" data-lg-stick-up="true">
+                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-sidebar" data-xl-device-layout="rd-navbar-sidebar" data-xxl-layout="rd-navbar-sidebar" data-xxl-device-layout="rd-navbar-sidebar" data-md-stick-up-offset="80px" data-lg-stick-up-offset="46px" data-md-stick-up="true" data-lg-stick-up="true">
                     <div class="rd-navbar-main-outer">
                         <div class="rd-navbar-main">
                             <!-- RD Navbar Panel-->
@@ -60,7 +59,7 @@
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
                                 <div class="rd-navbar-brand" id="logo-header">
-                                <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
+                                    <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
@@ -99,7 +98,7 @@
             <div class="container">
                 <div class="row row-50">
                     <div class=" col-lg-1 col-xl-1"></div>
-                    
+
                     <div class=" col-lg-1 col-xl-1"></div>
                 </div>
                 <!--<div class="pagination-media-wrap">
@@ -116,83 +115,83 @@
 
             <!--Forma za narucivanje-->
             <div class="col-lg-12 ">
-                        <div class="block-md text-center ">
-                            <form class="rd-form rd-mailform" id="orderForm" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
-                                <div class="row row-20">
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input form-control" id="name" type="text" name="name" onblur="$(this).valid()">
-                                            <label class="form-label" for="name">Ime</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input form-control" id="lastname" type="text" name="lastname" onblur="$(this).valid()">
-                                            <label class="form-label" for="lastname">Prezime</label>
-                                        </div>
-                                    </div>
-                                        <div class="col-md-6">
-                                            <div class="form-wrap">
-                                                <input class="form-input form-control" id="address" type="text" name="address" onblur="$(this).valid()">
-                                                <label class="form-label" for="lastname">Adresa</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-wrap">
-                                                <input class="form-input form-control" id="zip" type="text" name="zip" onblur="$(this).valid()">
-                                                <label class="form-label" for="lastname">Poštanski broj</label>
-                                            </div>
-                                        </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input form-control" id="phone" type="text" name="phone" onblur="$(this).valid()"> 
-                                            <label class="form-label" for="phone">Telefon</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap">
-                                            <input class="form-input form-control" id="email" type="email" name="email" onblur="$(this).valid()">
-                                            <label class="form-label" for="email">E-mail</label>
-                                        </div>
-                                    </div>
-                                    <div class=" col-lg-1 col-xl-1"></div>
-                    <div class="col-sm-6 col-lg-5 col-xl-5">
-                        <div class="product-item">
-                            <div class="product-item-image">
-                                <a href="single-product.html"><img src="images/3.png" alt="" width="300" height="500" /></a>
+                <div class="block-md text-center ">
+                    <form class="rd-form rd-mailform" id="orderForm" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
+                        <div class="row row-20">
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control" id="name" type="text" name="name" onblur="$(this).valid()">
+                                    <label class="form-label" for="name">Ime</label>
+                                </div>
                             </div>
-                            <div class="product-item-caption">
-                                <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6>
-                                <h4 class="product-price"><span>1900,00 RSD</span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control" id="lastname" type="text" name="lastname" onblur="$(this).valid()">
+                                    <label class="form-label" for="lastname">Prezime</label>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-5 col-xl-5">
-                        <div class="product-item">
-                            <div class="product-item-image">
-                                <a href="single-product.html"><img src="images/2.png" alt="" width="300" height="500" /></a>
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control" id="address" type="text" name="address" onblur="$(this).valid()">
+                                    <label class="form-label" for="lastname">Adresa</label>
+                                </div>
                             </div>
-                            <div class="product-item-caption">
-                                <h6 class="product-title"><a href="single-product.html">POSTKOVID
-                                </a></h6>
-                                <h4 class="product-price"><span>1900,00 RSD </span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control" id="zip" type="text" name="zip" onblur="$(this).valid()">
+                                    <label class="form-label" for="lastname">Poštanski broj</label>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                                    <div class="col-12">
-                                        <div class="form-wrap">
-                                            <label class="form-label" for="napomena">Napomena</label>
-                                            <textarea class="form-input form-control" id="napomena" name="napomena" onblur="$(this).valid()"></textarea>
-                                            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                                        </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control" id="phone" type="text" name="phone" onblur="$(this).valid()">
+                                    <label class="form-label" for="phone">Telefon</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control" id="email" type="email" name="email" onblur="$(this).valid()">
+                                    <label class="form-label" for="email">E-mail</label>
+                                </div>
+                            </div>
+                            <div class=" col-lg-1 col-xl-1"></div>
+                            <div class="col-sm-6 col-lg-5 col-xl-5">
+                                <div class="product-item">
+                                    <div class="product-item-image">
+                                        <a href="single-product.html"><img src="images/3.png" alt="" width="300" height="500" /></a>
                                     </div>
-                                    <div class="col-md-12">
-                                        <button class="button button-block-form button-secondary-light" type="submit">Naruči</button>
+                                    <div class="product-item-caption">
+                                        <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6>
+                                        <h4 class="product-price"><span>1900,00 RSD</span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-sm-6 col-lg-5 col-xl-5">
+                                <div class="product-item">
+                                    <div class="product-item-image">
+                                        <a href="single-product.html"><img src="images/2.png" alt="" width="300" height="500" /></a>
+                                    </div>
+                                    <div class="product-item-caption">
+                                        <h6 class="product-title"><a href="single-product.html">POSTKOVID
+                                            </a></h6>
+                                        <h4 class="product-price"><span>1900,00 RSD </span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-wrap">
+                                    <label class="form-label" for="napomena">Napomena</label>
+                                    <textarea class="form-input form-control" id="napomena" name="napomena" onblur="$(this).valid()"></textarea>
+                                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="button button-block-form button-secondary-light" type="submit">Naruči</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                </div>
+            </div>
         </section>
         <!-- Footer Classic-->
         <footer class="footer-classic context-dark parallax-container " data-parallax-img="images/bg-footer-1-1920x725.jpg ">
