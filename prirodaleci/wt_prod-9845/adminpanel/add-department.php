@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Data Table | Kiaalap - Kiaalap Admin Template</title>
+    <title>Dodavanje proizvoda</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -53,22 +53,17 @@
 		============================================ -->
     <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
-    <!-- x-editor CSS
+    <!-- forms CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/editor/select2.css">
-    <link rel="stylesheet" href="css/editor/datetimepicker.css">
-    <link rel="stylesheet" href="css/editor/bootstrap-editable.css">
-    <link rel="stylesheet" href="css/editor/x-editor-style.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/data-table/bootstrap-table.css">
-    <link rel="stylesheet" href="css/data-table/bootstrap-editable.css">
+    <link rel="stylesheet" href="css/form/all-type-forms.css">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="../css/sweetalert.css">
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -94,7 +89,7 @@
 								   <span class="mini-click-non">Početna</span>
 								</a>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
+                                <li><a title="Dashboard v.1" href="index.php"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
                                 <!--<li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>-->
                                 <!--<li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>-->
                             </ul>
@@ -141,9 +136,9 @@
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Proizvodi</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Lista proizvoda</span></a></li>
-                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Dodaj novi proizvod</span></a></li>
-                                <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Izmenite proizvod</span></a></li>
+                                <li><a title="Departments List" href="departments.php"><span class="mini-sub-pro">Lista proizvoda</span></a></li>
+                                <li><a title="Add Departments" href="add-department.php"><span class="mini-sub-pro">Dodaj novi proizvod</span></a></li>
+                                <li><a title="Edit Departments" href="edit-department.php"><span class="mini-sub-pro">Izmenite proizvod</span></a></li>
                             </ul>
                         </li>
                         <!--<li>
@@ -183,7 +178,7 @@
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Tabele</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <!--<li><a title="Peity Charts" href="static-table.html"><span class="mini-sub-pro">Static Table</span></a></li>-->
-                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Tabela narudžbina</span></a></li>
+                                <li><a title="Data Table" href="data-table.php"><span class="mini-sub-pro">Tabela narudžbina</span></a></li>
                             </ul>
                         </li>
                         <!-- <li>
@@ -1066,7 +1061,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Data Table</span>
+                                            <li><span class="bread-blod">Add Department</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1077,353 +1072,55 @@
                 </div>
             </div>
         </div>
-        <!-- Static Table Start -->
-        <div class="data-table-area mg-b-15">
+        <!-- Single pro tab review Start-->
+        <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="sparkline13-list">
-                            <div class="sparkline13-hd">
-                                <div class="main-sparkline13-hd">
-                                    <h1>Projects <span class="table-project-n">Data</span> Table</h1>
-                                </div>
-                            </div>
-                            <div class="sparkline13-graph">
-                                <div class="datatable-dashv1-list custom-datatable-overright">
-                                    <div id="toolbar">
-                                        <select class="form-control dt-tb">
-											<option value="">Export Basic</option>
-											<option value="all">Export All</option>
-											<option value="selected">Export Selected</option>
-										</select>
+                        <div class="product-payment-inner-st">
+                            <ul id="myTabedu1" class="tab-review-design">
+                                <li class="active"><a href="#description">Dodavanje proizvoda</a></li>
+                            </ul>
+                            <form class="rd-form rd-mailform" id="productAdd" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
+                        <div class="row row-20">
+                            <div class=" col-lg-1 col-xl-1"></div>
+                            <div class="col-sm-6 col-lg-5 col-xl-5">
+                                <div class="product-item">
+                                    <div class="product-item-image">
+                                        <a href="single-product.html"><img src="../images/3.png" alt="" width="300" height="500" /></a>
                                     </div>
-                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                        data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                                        <thead>
-                                            <tr>
-                                                <th data-field="state" data-checkbox="true"></th>
-                                                <th data-field="id">ID</th>
-                                                <th data-field="name" data-editable="true">Task</th>
-                                                <th data-field="email" data-editable="true">Email</th>
-                                                <th data-field="phone" data-editable="true">Phone</th>
-                                                <th data-field="complete">Completed</th>
-                                                <th data-field="task" data-editable="true">Task</th>
-                                                <th data-field="date" data-editable="true">Date</th>
-                                                <th data-field="price" data-editable="true">Price</th>
-                                                <th data-field="action">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td></td>
-                                                <td>1</td>
-                                                <td>Web Development</td>
-                                                <td>admin@uttara.com</td>
-                                                <td>+8801962067309</td>
-                                                <td class="datatable-ct"><span class="pie">1/6</span>
-                                                </td>
-                                                <td>10%</td>
-                                                <td>Jul 14, 2017</td>
-                                                <td>$5455</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>2</td>
-                                                <td>Graphic Design</td>
-                                                <td>fox@itpark.com</td>
-                                                <td>+8801762067304</td>
-                                                <td class="datatable-ct"><span class="pie">230/360</span>
-                                                </td>
-                                                <td>70%</td>
-                                                <td>fab 2, 2017</td>
-                                                <td>$8756</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>3</td>
-                                                <td>Software Development</td>
-                                                <td>gumre@hash.com</td>
-                                                <td>+8801862067308</td>
-                                                <td class="datatable-ct"><span class="pie">0.42/1.461</span>
-                                                </td>
-                                                <td>5%</td>
-                                                <td>Seb 5, 2017</td>
-                                                <td>$9875</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>4</td>
-                                                <td>Woocommerce</td>
-                                                <td>kyum@frok.com</td>
-                                                <td>+8801962066547</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Oct 10, 2017</td>
-                                                <td>$3254</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>5</td>
-                                                <td>Joomla</td>
-                                                <td>jams@game.com</td>
-                                                <td>+8801962098745</td>
-                                                <td class="datatable-ct"><span class="pie">200,133</span>
-                                                </td>
-                                                <td>80%</td>
-                                                <td>Nov 20, 2017</td>
-                                                <td>$58745</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>6</td>
-                                                <td>Wordpress</td>
-                                                <td>flat@yem.com</td>
-                                                <td>+8801962254781</td>
-                                                <td class="datatable-ct"><span class="pie">0.42,1.051</span>
-                                                </td>
-                                                <td>30%</td>
-                                                <td>Aug 25, 2017</td>
-                                                <td>$789879</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>7</td>
-                                                <td>Ecommerce</td>
-                                                <td>hasan@wpm.com</td>
-                                                <td>+8801962254863</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>July 17, 2017</td>
-                                                <td>$21424</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>8</td>
-                                                <td>Android Apps</td>
-                                                <td>ATM@devep.com</td>
-                                                <td>+8801962875469</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>June 11, 2017</td>
-                                                <td>$78978</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>9</td>
-                                                <td>Prestashop</td>
-                                                <td>presta@Prest.com</td>
-                                                <td>+8801962067524</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>May 9, 2017</td>
-                                                <td>$45645</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>10</td>
-                                                <td>Game Development</td>
-                                                <td>Dev@game.com</td>
-                                                <td>+8801962067457</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>April 5, 2017</td>
-                                                <td>$4564545</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>11</td>
-                                                <td>Angular Js</td>
-                                                <td>gular@angular.com</td>
-                                                <td>+8801962067124</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Dec 1, 2017</td>
-                                                <td>$645455</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>12</td>
-                                                <td>Opencart</td>
-                                                <td>open@cart.com</td>
-                                                <td>+8801962067587</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Jan 6, 2017</td>
-                                                <td>$78978</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>13</td>
-                                                <td>Education</td>
-                                                <td>john@example.com</td>
-                                                <td>+8801962067471</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Feb 6, 2016</td>
-                                                <td>$456456</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>14</td>
-                                                <td>Construction</td>
-                                                <td>mary@example.com</td>
-                                                <td>+8801962012457</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Jan 6, 2016</td>
-                                                <td>$87978</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>15</td>
-                                                <td>Real Estate</td>
-                                                <td>july@example.com</td>
-                                                <td>+8801962067309</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Dec 1, 2016</td>
-                                                <td>$454554</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>16</td>
-                                                <td>Personal Regume</td>
-                                                <td>john@example.com</td>
-                                                <td>+8801962067306</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>May 9, 2016</td>
-                                                <td>$564555</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>17</td>
-                                                <td>Admin Template</td>
-                                                <td>mary@example.com</td>
-                                                <td>+8801962067305</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>June 11, 2016</td>
-                                                <td>$454565</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>18</td>
-                                                <td>FrontEnd</td>
-                                                <td>july@example.com</td>
-                                                <td>+8801962067304</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>May 9, 2015</td>
-                                                <td>$456546</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>19</td>
-                                                <td>Backend</td>
-                                                <td>john@range.com</td>
-                                                <td>+8801962067303</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Feb 9, 2014</td>
-                                                <td>$564554</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>20</td>
-                                                <td>Java Advance</td>
-                                                <td>lamon@ghs.com</td>
-                                                <td>+8801962067302</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>July 6, 2014</td>
-                                                <td>$789889</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>21</td>
-                                                <td>Jquery Advance</td>
-                                                <td>hasad@uth.com</td>
-                                                <td>+8801962067301</td>
-                                                <td class="datatable-ct"><span class="pie">2,7</span>
-                                                </td>
-                                                <td>15%</td>
-                                                <td>Jun 6, 2013</td>
-                                                <td>$4565656</td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="product-item-caption">
+                                        <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6><h4 class="product-price"><span></span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-sm-6 col-lg-5 col-xl-5">
+                                <div class="product-item">
+                                    <div class="product-item-image">
+                                        <a href="single-product.html"><img src="../images/2.png" alt="" width="300" height="500" /></a>
+                                    </div>
+                                    <div class="product-item-caption">
+                                        <h6 class="product-title"><a href="single-product.html">POSTKOVID
+                                            </a></h6><span></span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="button button-block-form button-secondary-light" type="submit">Dodaj</button>
+                            </div>
+                        </div>
+                    </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Static Table End -->
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                            <p>Copyright © 2018. All rights reserved.<a href="https://colorlib.com/wp/templates/"></a></p>
                         </div>
                     </div>
                 </div>
@@ -1433,7 +1130,9 @@
 
     <!-- jquery
 		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../vendors/jquery-3.3.1.min.js"></script>
+    <script src="../vendors/jquery.easing.1.3.min.js"></script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="js/bootstrap.min.js"></script>
@@ -1463,29 +1162,20 @@
 		============================================ -->
     <script src="js/metisMenu/metisMenu.min.js"></script>
     <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- data table JS
+    <!-- morrisjs JS
 		============================================ -->
-    <script src="js/data-table/bootstrap-table.js"></script>
-    <script src="js/data-table/tableExport.js"></script>
-    <script src="js/data-table/data-table-active.js"></script>
-    <script src="js/data-table/bootstrap-table-editable.js"></script>
-    <script src="js/data-table/bootstrap-editable.js"></script>
-    <script src="js/data-table/bootstrap-table-resizable.js"></script>
-    <script src="js/data-table/colResizable-1.5.source.js"></script>
-    <script src="js/data-table/bootstrap-table-export.js"></script>
-    <!--  editable JS
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
 		============================================ -->
-    <script src="js/editable/jquery.mockjax.js"></script>
-    <script src="js/editable/mock-active.js"></script>
-    <script src="js/editable/select2.js"></script>
-    <script src="js/editable/moment.min.js"></script>
-    <script src="js/editable/bootstrap-datetimepicker.js"></script>
-    <script src="js/editable/bootstrap-editable.js"></script>
-    <script src="js/editable/xediable-active.js"></script>
-    <!-- Chart JS
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- form validate JS
 		============================================ -->
-    <script src="js/chart/jquery.peity.min.js"></script>
-    <script src="js/peity/peity-active.js"></script>
+    <script src="js/form-validation/jquery.form.min.js"></script>
+    <script src="js/form-validation/jquery.validate.min.js"></script>
+    <script src="js/form-validation/form-active.js"></script>
     <!-- tab JS
 		============================================ -->
     <script src="js/tab.js"></script>
@@ -1498,6 +1188,12 @@
     <!-- tawk chat JS
 		============================================ -->
     <script src="js/tawk-chat.js"></script>
+    <script src="../js/mail.js"></script>
+    <script src="../js/recaptcha.js"></script>
+    <script src="../js/sweetalert.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 </body>
 
 </html>

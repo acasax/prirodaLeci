@@ -180,28 +180,16 @@ $(document).ready(function() {
         })
     }
 
-    //Subscribe email sender
-    const $subForm = $('#subscription')
+    //Dodavanje proizvoda
+    const $subForm = $('#productAdd')
         //let validator = void(0)
 
     if ($subForm.length) {
         validator = $subForm.validate({
-            rules: {
-                subemail: {
-                    required: true,
-                    email: true
-                }
-            },
-            messages: {
-                subemail: {
-                    required: 'Please enter your e-mail address.',
-                    email: 'Your e-mail address is not valid'
-                }
-            },
             submitHandler: function submitHandler(form) {
                 event.preventDefault();
                 $.ajax({
-                    url: 'php_vendors/sendemailsubscribe.php',
+                    url: '../php_vendors/addproduct.php',
                     method: 'POST',
                     data: new FormData(form),
                     contentType: false,

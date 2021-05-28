@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Department | Kiaalap - Kiaalap Admin Template</title>
+    <title>Data Table | Kiaalap - Kiaalap Admin Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -53,9 +53,16 @@
 		============================================ -->
     <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
-    <!-- forms CSS
+    <!-- x-editor CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/form/all-type-forms.css">
+    <link rel="stylesheet" href="css/editor/select2.css">
+    <link rel="stylesheet" href="css/editor/datetimepicker.css">
+    <link rel="stylesheet" href="css/editor/bootstrap-editable.css">
+    <link rel="stylesheet" href="css/editor/x-editor-style.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/data-table/bootstrap-table.css">
+    <link rel="stylesheet" href="css/data-table/bootstrap-editable.css">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
@@ -1059,7 +1066,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Add Department</span>
+                                            <li><span class="bread-blod">Data Table</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1070,125 +1077,35 @@
                 </div>
             </div>
         </div>
-        <!-- Single pro tab review Start-->
-        <div class="single-pro-review-area mt-t-30 mg-b-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="product-payment-inner-st">
-                            <ul id="myTabedu1" class="tab-review-design">
-                                <li class="active"><a href="#description">Add Department</a></li>
-                                <li><a href="#reviews"> Account Information</a></li>
-                                <li><a href="#INFORMATION">Social Information</a></li>
-                            </ul>
-                            <div id="myTabContent" class="tab-content custom-product-edit">
-                                <div class="product-tab-list tab-pane fade active in" id="description">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="review-content-section">
-                                                <form id="add-department" action="#" class="add-department">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <div class="form-group">
-                                                                <input name="name" type="text" class="form-control" placeholder="Name">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input name="headofdepartment" type="text" class="form-control" placeholder="Head of Department">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input name="email" type="email" class="form-control" placeholder="Email">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                            <div class="form-group">
-                                                                <input name="phone" type="number" class="form-control" placeholder="Phone">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input name="noofstudent" type="number" class="form-control" placeholder="No. of Students">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input name="status" type="text" class="form-control" placeholder="Status">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="payment-adress">
-                                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-tab-list tab-pane fade" id="reviews">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="review-content-section">
-                                                <div class="row">
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                        <div class="devit-card-custom">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" placeholder="Email">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="number" class="form-control" placeholder="Phone">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="password" class="form-control" placeholder="Password">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="password" class="form-control" placeholder="Confirm Password">
-                                                            </div>
-                                                            <a href="#!" class="btn btn-primary waves-effect waves-light">Submit</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-tab-list tab-pane fade" id="INFORMATION">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="review-content-section">
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<div class="devit-card-custom">
-															<div class="form-group">
-																<input type="url" class="form-control" placeholder="Facebook URL">
-															</div>
-															<div class="form-group">
-																<input type="url" class="form-control" placeholder="Twitter URL">
-															</div>
-															<div class="form-group">
-																<input type="url" class="form-control" placeholder="Google Plus">
-															</div>
-															<div class="form-group">
-																<input type="url" class="form-control" placeholder="Linkedin URL">
-															</div>
-															<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
-														</div>
-													</div>
-												</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Static Table Start -->
+        <div class="w-100 h-100 users-div" style="">
+    <div class="container-fluid">
+        <button type="button" id="add_button" class="btn btn-primary m-4" data-toggle="modal" data-target="#exampleModalCenter">
+            Insert new blog
+        </button>
+        <br>
+        <table id="blog_data" class="table table-striped table-bordered" style="width:100%">
+            <thead class="thead-dark">
+            <tr>
+                <th style="width: 5%"></th>
+                <th>Title</th>
+                <th>Text</th>
+                <th>Picture</th>
+                <th style="width: 5%"></th>
+                <th style="width: 5%"></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+</div>
+        <!-- Static Table End -->
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                            <p>Copyright © 2018. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -1228,20 +1145,29 @@
 		============================================ -->
     <script src="js/metisMenu/metisMenu.min.js"></script>
     <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- morrisjs JS
+    <!-- data table JS
 		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
-    <!-- calendar JS
+    <script src="js/data-table/bootstrap-table.js"></script>
+    <script src="js/data-table/tableExport.js"></script>
+    <script src="js/data-table/data-table-active.js"></script>
+    <script src="js/data-table/bootstrap-table-editable.js"></script>
+    <script src="js/data-table/bootstrap-editable.js"></script>
+    <script src="js/data-table/bootstrap-table-resizable.js"></script>
+    <script src="js/data-table/colResizable-1.5.source.js"></script>
+    <script src="js/data-table/bootstrap-table-export.js"></script>
+    <!--  editable JS
 		============================================ -->
-    <script src="js/calendar/moment.min.js"></script>
-    <script src="js/calendar/fullcalendar.min.js"></script>
-    <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- form validate JS
+    <script src="js/editable/jquery.mockjax.js"></script>
+    <script src="js/editable/mock-active.js"></script>
+    <script src="js/editable/select2.js"></script>
+    <script src="js/editable/moment.min.js"></script>
+    <script src="js/editable/bootstrap-datetimepicker.js"></script>
+    <script src="js/editable/bootstrap-editable.js"></script>
+    <script src="js/editable/xediable-active.js"></script>
+    <!-- Chart JS
 		============================================ -->
-    <script src="js/form-validation/jquery.form.min.js"></script>
-    <script src="js/form-validation/jquery.validate.min.js"></script>
-    <script src="js/form-validation/form-active.js"></script>
+    <script src="js/chart/jquery.peity.min.js"></script>
+    <script src="js/peity/peity-active.js"></script>
     <!-- tab JS
 		============================================ -->
     <script src="js/tab.js"></script>
@@ -1252,8 +1178,8 @@
 		============================================ -->
     <script src="js/main.js"></script>
     <!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
+		============================================ 
+    <script src="js/tawk-chat.js"></script>-->
 </body>
 
 </html>

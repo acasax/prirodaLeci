@@ -866,7 +866,7 @@
                                                    <span class="mini-click-non">Početna</span>
                                                 </a>
                                             <ul class="submenu-angle" aria-expanded="true">
-                                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
+                                                <li><a title="Dashboard v.1" href="index.php"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
                                                 <!--<li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>-->
                                                 <!--<li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>-->
                                             </ul>
@@ -911,11 +911,10 @@
                                             </ul>
                                         </li>-->
                                         <li>
-                                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Departments</span></a>
+                                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Proizvodi   </span></a>
                                             <ul class="submenu-angle" aria-expanded="false">
-                                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Departments List</span></a></li>
-                                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Departments</span></a></li>
-                                                <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
+                                                <li><a title="Departments List" href="departments.php"><span class="mini-sub-pro">Lista proizvoda</span></a></li>
+                                                <li><a title="Add Departments" href="add-department.php"><span class="mini-sub-pro">Dodaj novi proizvod</span></a></li>
                                             </ul>
                                         </li>
                                         <!--<li>
@@ -955,7 +954,7 @@
                                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Tabele</span></a>
                                             <ul class="submenu-angle" aria-expanded="false">
                                                 <!--<li><a title="Peity Charts" href="static-table.html"><span class="mini-sub-pro">Static Table</span></a></li>-->
-                                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Tabela narudžbina</span></a></li>
+                                                <li><a title="Data Table" href="data-table.php"><span class="mini-sub-pro">Tabela narudžbina</span></a></li>
                                             </ul>
                                         </li>
                                         <!-- <li>
@@ -1028,143 +1027,62 @@
                 </div>
             </div>
         </div>
-        <div class="product-status mg-b-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="product-status-wrap drp-lst">
-                            <h4>Proizvodi
-                            </h4>
-                            <div class="add-product">
-                                <a href="add-department.html">Add Departments</a>
-                            </div>
-                            <div class="asset-inner">
-                                <table>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Name of Dept.</th>
-                                        <th>Status</th>
-                                        <th>Head</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>No. of Students</th>
-                                        <th>Setting</th>
-                                    </tr>
-                                    <?php
-                                        include "../services/dbconnection.php";
+        <div class="w-100 h-100 users-div" style="">
+    <div class="container-fluid">
+        <button type="button" id="add_button" class="btn btn-primary m-4" data-toggle="modal" data-target="#exampleModalCenter">
+            Insert new blog
+        </button>
+        <br>
+        <table id="blog_data" class="table table-striped table-bordered" style="width:100%">
+            <thead class="thead-dark">
+            <tr>
+                <th style="width: 5%">ID</th>
+                <th>Naziv</th>
+                <th>Opis</th>
+                <th>Picture</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
 
-                                        $sql = "SELECT * FROM orders"
+</div>
 
-                                        
-                                    ?>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Computer</td>
-                                        <td>
-                                            <button class="pd-setting">Active</button>
-                                        </td>
-                                        <td>John Alva</td>
-                                        <td>admin@gmail.com</td>
-                                        <td>01962067309</td>
-                                        <td>1500</td>
-                                        <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Mechanical</td>
-                                        <td>
-                                            <button class="ps-setting">Paused</button>
-                                        </td>
-                                        <td>John Alva</td>
-                                        <td>admin@gmail.com</td>
-                                        <td>01962067309</td>
-                                        <td>1700</td>
-                                        <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>MBA</td>
-                                        <td>
-                                            <button class="ds-setting">Disabled</button>
-                                        </td>
-                                        <td>John Alva</td>
-                                        <td>admin@gmail.com</td>
-                                        <td>01962067309</td>
-                                        <td>1500</td>
-                                        <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>BBA</td>
-                                        <td>
-                                            <button class="pd-setting">Active</button>
-                                        </td>
-                                        <td>John Alva</td>
-                                        <td>admin@gmail.com</td>
-                                        <td>01962067309</td>
-                                        <td>1200</td>
-                                        <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>CSE</td>
-                                        <td>
-                                            <button class="pd-setting">Active</button>
-                                        </td>
-                                        <td>John Alva</td>
-                                        <td>admin@gmail.com</td>
-                                        <td>01962067309</td>
-                                        <td>1800</td>
-                                        <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>MBA</td>
-                                        <td>
-                                            <button class="ps-setting">Paused</button>
-                                        </td>
-                                        <td>John Alva</td>
-                                        <td>admin@gmail.com</td>
-                                        <td>01962067309</td>
-                                        <td>1000</td>
-                                        <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                            <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="custom-pagination">
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New blog</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                <form method="post" id="blog_form" enctype="multipart/form-data">
+                    <label class="control-label">Choose File</label>
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="image" id="imagelabel"></label>
+                        <input type="file" accept="image/*" name="image" id="image" onblur="$(this).valid()"  class="custom-file-input" placeholder="" >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Insert title</label>
+                        <input type="text" name="txt_title" onblur="$(this).valid()" id="txt_title" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Insert text</label>
+                        <input type="text" name="txt_text" onblur="$(this).valid()" id="txt_text" class="form-control" placeholder="" required >
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" name="id" id="id" />
+                <input type="hidden" name="operation" id="operation" />
+                <input type="submit" name="action" id="action" class="btn btn-primary" value="Add" />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"  id="dismiss-modal">Leave</button>
+            </div>
+            </form>
+
         </div>
+    </div>
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
