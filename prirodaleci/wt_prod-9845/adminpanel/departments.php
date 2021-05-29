@@ -79,12 +79,12 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="index.html">
+                            <a class="has-arrow" href="index.php">
 								   <span class="educate-icon educate-home icon-wrap"></span>
 								   <span class="mini-click-non">Početna</span>
 								</a>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
+                                <li><a title="Dashboard v.1" href="index.php"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
                                 <!--<li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>-->
                                 <!--<li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>-->
                             </ul>
@@ -131,9 +131,9 @@
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Proizvodi</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Lista proizvoda</span></a></li>
-                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Dodaj novi proizvod</span></a></li>
-                                <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Izmenite proizvod</span></a></li>
+                                <li><a title="Departments List" href="departments.php"><span class="mini-sub-pro">Lista proizvoda</span></a></li>
+                                <li><a title="Add Departments" href="add-department.php"><span class="mini-sub-pro">Dodaj novi proizvod</span></a></li>
+                                <li><a title="Edit Departments" href="edit-department.php"><span class="mini-sub-pro">Izmenite proizvod</span></a></li>
                             </ul>
                         </li>
                         <!--<li>
@@ -173,7 +173,7 @@
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Tabele</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <!--<li><a title="Peity Charts" href="static-table.html"><span class="mini-sub-pro">Static Table</span></a></li>-->
-                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Tabela narudžbina</span></a></li>
+                                <li><a title="Data Table" href="data-table.php"><span class="mini-sub-pro">Tabela narudžbina</span></a></li>
                             </ul>
                         </li>
                         <!-- <li>

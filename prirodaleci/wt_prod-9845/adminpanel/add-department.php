@@ -85,9 +85,9 @@
                     <ul class="metismenu" id="menu1">
                         <li class="active">
                             <a class="has-arrow" href="index.html">
-								   <span class="educate-icon educate-home icon-wrap"></span>
-								   <span class="mini-click-non">Početna</span>
-								</a>
+                                <span class="educate-icon educate-home icon-wrap"></span>
+                                <span class="mini-click-non">Početna</span>
+                            </a>
                             <ul class="submenu-angle" aria-expanded="true">
                                 <li><a title="Dashboard v.1" href="index.php"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
                                 <!--<li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>-->
@@ -241,8 +241,8 @@
                                     <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
                                         <div class="menu-switcher-pro">
                                             <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-													<i class="educate-icon educate-nav"></i>
-												</button>
+                                                <i class="educate-icon educate-nav"></i>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
@@ -394,10 +394,10 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<img src="img/product/pro4.jpg" alt="" />
-															<span class="admin-name">Prof.Anderson</span>
-															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
-														</a>
+                                                        <img src="img/product/pro4.jpg" alt="" />
+                                                        <span class="admin-name">Prof.Anderson</span>
+                                                        <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                                    </a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
                                                         </li>
@@ -737,9 +737,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
                                                                                             <label class="onoffswitch-label" for="example">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -753,9 +753,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
                                                                                             <label class="onoffswitch-label" for="example3">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -769,9 +769,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
                                                                                             <label class="onoffswitch-label" for="example4">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -785,9 +785,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
                                                                                             <label class="onoffswitch-label" for="example7">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -801,9 +801,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
                                                                                             <label class="onoffswitch-label" for="example2">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -817,9 +817,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example6">
                                                                                             <label class="onoffswitch-label" for="example6">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -833,9 +833,9 @@
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
                                                                                             <label class="onoffswitch-label" for="example5">
-																									<span class="onoffswitch-inner"></span>
-																									<span class="onoffswitch-switch"></span>
-																								</label>
+                                                                                                <span class="onoffswitch-inner"></span>
+                                                                                                <span class="onoffswitch-switch"></span>
+                                                                                            </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -1082,35 +1082,56 @@
                                 <li class="active"><a href="#description">Dodavanje proizvoda</a></li>
                             </ul>
                             <form class="rd-form rd-mailform" id="productAdd" data-form-output="form-output-global" data-form-type="contact" method="post" enctype="multipart/form-data">
-                        <div class="row row-20">
-                            <div class=" col-lg-1 col-xl-1"></div>
-                            <div class="col-sm-6 col-lg-5 col-xl-5">
-                                <div class="product-item">
-                                    <div class="product-item-image">
-                                        <a href="single-product.html"><img src="../images/3.png" alt="" width="300" height="500" /></a>
+                                <div class="row row-20">
+                                    <div class=" col-lg-3 col-xl-1"></div>
+                                    <div class="col-sm-6 col-lg-3 col-xl-5">
+                                        <div class="product-item">
+                                            <div class="product-item-image">
+                                                <a href="single-product.html"><img src="../images/3.png" alt="" width="300" height="500" /></a>
+                                            </div>
+                                            <div class="product-item-caption">
+                                                <h6 class="product-title"><a>NONBAK</a></h6>
+                                                <h4 class="product-price"><span></span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="product-item-caption">
-                                        <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6><h4 class="product-price"><span></span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
+                                    <div class="col-sm-6 col-lg-3 col-xl-5">
+                                        <div class="product-item">
+                                            <div class="product-item-image">
+                                                <a href="single-product.html"><img src="../images/2.png" alt="" width="300" height="500" /></a>
+                                            </div>
+                                            <div class="product-item-caption">
+                                                <h6 class="product-title"><a>POSTKOVID
+                                                    </a></h6><span></span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-5 col-xl-5">
-                                <div class="product-item">
-                                    <div class="product-item-image">
-                                        <a href="single-product.html"><img src="../images/2.png" alt="" width="300" height="500" /></a>
-                                    </div>
-                                    <div class="product-item-caption">
-                                        <h6 class="product-title"><a href="single-product.html">POSTKOVID
-                                            </a></h6><span></span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
-                                    </div>
+                                <div class="row">
+                                <div class="product-buttons" style="width: 25%; float: right;">
+                                    <button type="submit" class="button-default cart-btn" style="bottom:0;">Dodaj</button>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <button class="button button-block-form button-secondary-light" type="submit">Dodaj</button>
-                            </div>
+                                </div>
+
+                            </form>
                         </div>
-                    </form>
+                    </div>
+                    <div class="w-100 h-100 users-div" style="">
+                        <div class="container-fluid">
+                            <br>
+                            <table id="blog_data" class="table table-striped table-bordered" style="width:100%">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th style="width: 5%">ID</th>
+                                        <th>Naziv</th>
+                                        <th>Opis</th>
+                                        <th>Slika</th>
+                                        <th>Količina</th>
+                                    </tr>
+                                </thead>
+                            </table>
                         </div>
+
                     </div>
                 </div>
             </div>
