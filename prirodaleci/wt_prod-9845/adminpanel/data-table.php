@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Data Table | Kiaalap - Kiaalap Admin Template</title>
+    <title>Tabela narudzbina</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -1080,11 +1080,7 @@
         <!-- Static Table Start -->
         <div class="w-100 h-100 users-div" style="">
     <div class="container-fluid">
-        <button type="button" id="add_button" class="btn btn-primary m-4" data-toggle="modal" data-target="#exampleModalCenter">
-            Insert new blog
-        </button>
-        <br>
-        <table id="blog_data" class="table table-striped table-bordered" style="width:100%">
+        <table id="order_data" class="table table-striped table-bordered" style="width:100%">
             <thead class="thead-dark">
             <tr>
                 <th style="width: 5%">ID</th>
@@ -1097,6 +1093,8 @@
                 <th>Email</th>
                 <th>Status</th>
                 <th>Napomena</th>
+                <th style="width: 5%;"></th>
+                <th style="width: 5%;"></th>
             </tr>
             </thead>
         </table>
