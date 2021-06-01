@@ -1,12 +1,12 @@
 <?php
 
-include "../../connection.php";
+include "../../services/dbconnection.php";
 include "functions.php";
-require_once '../class/class.user.php';
+require_once '../../php_vendors/class.user.php';
 $user_class = new USER();
 if (isset($_POST["blog_id"])) {
     $stmt = $db->prepare(
-        "DELETE FROM blog WHERE id = :id"
+        "DELETE FROM orders WHERE id = :id"
     );
     $result = $stmt->execute(
         array(

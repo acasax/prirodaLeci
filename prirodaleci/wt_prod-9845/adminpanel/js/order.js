@@ -1,12 +1,22 @@
 $(document).ready(function() {
 
+    $('#add_button').click(function() {
+        $('#blog_form')[0].reset();
+        $('.modal-title').text("Insert");
+        $('#image').val("");
+        $('#imagelabel').text("");
+        $('#txt_text').text("");
+        $('#action').val("Dodaj");
+        $('#operation').val("Dodaj");
+    });
+
     let dataTable = $('#order_data').DataTable({
         "processing": true,
         "serverSide": true,
         "autoWidth": false,
         "order": [],
         "ajax": {
-            url: "php_assets/blog_functions/blog_function.php",
+            url: "product_func/order_function.php",
             type: "POST"
         },
         "columnDefs": [{
@@ -15,19 +25,19 @@ $(document).ready(function() {
         }, ],
         "lengthMenu": [5, 10, 15, 20],
         "language": {
-            "lengthMenu": "Show max _MENU_ blog on page",
-            "zeroRecords": "zero records",
-            "info": "Show page _PAGE_ of _PAGES_",
-            "infoEmpty": "No records available",
+            "lengthMenu": "Prikaži _MENU_ narudžbina",
+            "zeroRecords": "Nema narudžbina",
+            "info": "Prikaži stranu _PAGE_ od _PAGES_",
+            "infoEmpty": "Nema dostupnih podataka",
             "infoFiltered": "(Show _MAX_ of all image)",
-            "loadingRecords": "Loading...",
-            "processing": "Loading",
-            "search": "Search:",
+            "loadingRecords": "Učitavanje...",
+            "processing": "Obrada",
+            "search": "Pretraga:",
             "paginate": {
-                "first": "First",
-                "last": "Last",
-                "next": "->",
-                "previous": "<-"
+                "first": "Prva",
+                "last": "Poslednja",
+                "next": ">",
+                "previous": "<"
             },
         },
 
@@ -64,7 +74,7 @@ $(document).ready(function() {
             submitHandler: function submitHandler(form) {
                 event.preventDefault();
                 $.ajax({
-                    url: "php_assets/blog_functions/blog_func.php",
+                    url: "product_func/order_func.php",
                     method: 'POST',
                     data: new FormData(form),
                     processData: false,
@@ -120,21 +130,27 @@ $(document).ready(function() {
 
 
     $(document).on('click', '.update', function() {
-        let blog_id = $(this).attr("id");
+        let order_id = $(this).attr("id");
         $.ajax({
-            url: "php_assets/blog_functions/blog_fetch_single.php",
+            url: "product_func/order_fetch_single.php",
             method: "POST",
-            data: { blog_id: blog_id },
+            data: { order_id: order_id },
             dataType: "json",
             success: function(data) {
-                $('#blog_form')[0].reset();
+                $('#order_form')[0].reset();
                 $('#exampleModalCenter').modal('show');
-                $('#txt_title').val(data.title);
-                $('#txt_text').val(data.text);
-                $('.custom-file-label').text(data.image_name);
-                $('#image').val(data.image_name);
-                $('.modal-title').text("Change");
-                $('#id').val(blog_id);
+                $('#order_NAME').val(data.order_NAME);
+                $('#order_LASTNAME').val(data.order_LASTNAME);
+                $('.modal-title').text("Izmena");
+                $('#order_ADDRESS').val(data.order_ADDRESS);
+                $('#order_ZIP').val(data.order_ZIP);
+                $('#order_TIME').val(data.order_TIME);
+                $('#order_PHONE').val(data.order_PHONE);
+                $('#order_EMAIL').val(data.order_EMAIL);
+                $('#order_STATUS').val(data.order_STATUS);
+                $('#order_NOTE').val(data.order_NOTE);
+                $('#order_ITEM').val(data.order_ITEM);
+                $('#order_QUANTITY').val(data.order_QUANTITY);
                 $('#action').val("Promeni");
                 $('#operation').val("Promeni");
             }
@@ -146,7 +162,7 @@ $(document).ready(function() {
     $(document).on('click', '.delete', function() {
         let blog_id = $(this).attr("id");
         swal({
-            title: "Are you sure you want to delete this blog?",
+            title: "Da li ste sigurni da želite da obrišete narudžbinu?",
             type: "error",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -156,7 +172,7 @@ $(document).ready(function() {
         }, function(isConfirm) {
             if (!isConfirm) return;
             $.ajax({
-                url: "php_assets/blog_functions/blog_delete.php",
+                url: "product_func/order_delete.php",
                 method: "POST",
                 data: { blog_id: blog_id },
                 success: function(data) {

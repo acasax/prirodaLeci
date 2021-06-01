@@ -1,6 +1,6 @@
 <?php
 
-include "../../connection.php";
+include "../../services/dbconnection.php";
 include "functions.php";
 require_once '../../services/class.user.php';
 $user_class = new USER();

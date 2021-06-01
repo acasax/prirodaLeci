@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px;
   font-weight:700;
 }
-a {transition: all 0.3s ease 0s;text-decoration:none; color: #5a6123 !important;}
+a {transition: all 0.3s ease 0s;text-decoration:none;}
 a:hover{
   color: #ec4445;
   text-decoration: none;

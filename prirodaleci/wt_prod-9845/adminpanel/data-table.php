@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="../css/sweetalert.css">
     <!-- owl.carousel CSS
 		============================================ -->
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -1078,7 +1079,7 @@
             </div>
         </div>
         <!-- Static Table Start -->
-        <div class="w-100 h-100 users-div" style="">
+        <div class="w-100 h-100 users-div">
     <div class="container-fluid">
         <table id="order_data" class="table table-striped table-bordered" style="width:100%">
             <thead class="thead-dark">
@@ -1093,6 +1094,8 @@
                 <th>Email</th>
                 <th>Status</th>
                 <th>Napomena</th>
+                <th>Proizvod</th>
+                <th>Količina</th>
                 <th style="width: 5%;"></th>
                 <th style="width: 5%;"></th>
             </tr>
@@ -1101,6 +1104,72 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Update</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="order_form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="control-label">Ime</label>
+                        <input type="text" name="order_NAME" onblur="$(this).valid()" id="order_NAME" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Prezime</label>
+                        <input type="text" name="order_LASTNAME" onblur="$(this).valid()" id="order_LASTNAME" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Adresa</label>
+                        <input type="text" name="order_ADDRESS" onblur="$(this).valid()" id="order_ADDRESS" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Poštanski broj</label>
+                        <input type="text" name="order_ZIP" onblur="$(this).valid()" id="order_ZIP" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Vreme narudžbine</label>
+                        <input type="text" name="order_TIME" onblur="$(this).valid()" id="order_TIME" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Telefon</label>
+                        <input type="text" name="order_PHONE" onblur="$(this).valid()" id="order_PHONE" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input type="text" name="order_EMAIL" onblur="$(this).valid()" id="order_EMAIL" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Status</label>
+                        <input type="text" name="order_STATUS" onblur="$(this).valid()" id="order_STATUS" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Proizvod</label>
+                        <input type="text" name="order_ITEM" onblur="$(this).valid()" id="order_ITEM" class="form-control" placeholder="" required >
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Količina</label>
+                        <input type="text" name="order_QUANTITY" onblur="$(this).valid()" id="order_QUANTITY" class="form-control" placeholder="" required >
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" name="id" id="id" />
+                <input type="hidden" name="operation" id="operation" />
+                <input type="submit" name="action" id="action" class="btn btn-primary" value="Add" />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"  id="dismiss-modal">Leave</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+
         <!-- Static Table End -->
         <div class="footer-copyright-area">
             <div class="container-fluid">
@@ -1115,9 +1184,16 @@
         </div>
     </div>
 
+
+    
+    
     <!-- jquery
 		============================================ -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="js/bootstrap.min.js"></script>
@@ -1182,6 +1258,8 @@
     <!-- tawk chat JS
 		============================================ 
     <script src="js/tawk-chat.js"></script>-->
+    <script src="js/order.js"></script>
+    <script src="../js/sweetalert.js"></script>
 </body>
 
 </html>
