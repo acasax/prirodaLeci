@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('#add_button').click(function() {
-        $('#blog_form')[0].reset();
+        $('#order_form')[0].reset();
         $('.modal-title').text("Insert");
         $('#image').val("");
         $('#imagelabel').text("");
@@ -43,11 +43,11 @@ $(document).ready(function() {
 
     });
 
-    const $blogForm = $('#blog_form')
+    const $orderForm = $('#order_form')
     let validator = void(0)
 
-    if ($blogForm.length) {
-        validator = $blogForm.validate({
+    if ($orderForm.length) {
+        validator = $orderForm.validate({
             rules: {
                 txt_title: {
                     required: true,
@@ -98,7 +98,7 @@ $(document).ready(function() {
                                 showConfirmButton: false,
                                 type: "error"
                             });
-                            $('#blog_form')[0].reset();
+                            $('#order_form')[0].reset();
                             return;
                         }
 
@@ -112,7 +112,7 @@ $(document).ready(function() {
                                 showConfirmButton: false,
                                 type: "success"
                             });
-                            $('#blog_form')[0].reset();
+                            $('#order_form')[0].reset();
                             $('#exampleModalCenter').modal('hide');
                             dataTable.ajax.reload();
                         }
@@ -139,6 +139,7 @@ $(document).ready(function() {
             success: function(data) {
                 $('#order_form')[0].reset();
                 $('#exampleModalCenter').modal('show');
+                $('#id').val(data.id);
                 $('#order_NAME').val(data.order_NAME);
                 $('#order_LASTNAME').val(data.order_LASTNAME);
                 $('.modal-title').text("Izmena");
@@ -160,7 +161,7 @@ $(document).ready(function() {
 
 
     $(document).on('click', '.delete', function() {
-        let blog_id = $(this).attr("id");
+        let order_id = $(this).attr("id");
         swal({
             title: "Da li ste sigurni da želite da obrišete narudžbinu?",
             type: "error",
@@ -174,7 +175,7 @@ $(document).ready(function() {
             $.ajax({
                 url: "product_func/order_delete.php",
                 method: "POST",
-                data: { blog_id: blog_id },
+                data: { order_id: order_id },
                 success: function(data) {
                     let objResp = JSON.parse(data);
                     let str = objResp.type;

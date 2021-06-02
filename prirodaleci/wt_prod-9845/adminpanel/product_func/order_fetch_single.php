@@ -10,6 +10,7 @@ if (isset($_POST["order_id"])) {
     $stmt = $db->prepare($query1);
     $stmt->execute();
     $result = $stmt->fetch();
+    $output["id"] = $_POST["order_id"];
     $output["order_NAME"] = $result["name"];
     $output["order_LASTNAME"] = $result["lastname"];
     $output["order_ADDRESS"] = $result["address"];

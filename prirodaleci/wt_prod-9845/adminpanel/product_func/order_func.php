@@ -5,76 +5,55 @@ include "functions.php";
 require_once '../../services/class.user.php';
 $user_class = new USER();
 if (isset($_POST["operation"])) {
-    $valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'bmp', 'pdf', 'doc', 'ppt');
-    if ($_POST["operation"] === "Dodaj") {
-
-        $title = $_POST['txt_title'];
-        $img = $_FILES['image']['name'];
-        $text = $_POST['txt_text'];
-
-        //pretvori ga u funkciju
-        $db->exec("set names utf8");
-        $get_img_name_sql1 = "SELECT * FROM blog WHERE image_name = '$img'";
-        $get_img_name1 = $db->prepare($get_img_name_sql1);
-        $get_img_name1->execute();
-        $row = $get_img_name1->fetch(PDO::FETCH_ASSOC);
-        $num_of_img_name = $get_img_name1->rowCount();
-
-
-        if ($num_of_img_name == 0) {
-            if(is_array($_FILES)) {
-                if(is_uploaded_file($_FILES['image']['tmp_name'])) {
-                    $sourcePath = $_FILES['image']['tmp_name'];
-                    $targetPath = "image/".$_FILES['image']['name'];
-                    if (move_uploaded_file($sourcePath, $targetPath)) {
-                        $stmt = $db->prepare("
-                                INSERT INTO `blog`(`title`, `image_name`, `text`) 
-                                VALUES (:title, :name, :text)
-                            ");
-                        $result = $stmt->execute(
-                            array(
-                                ':title' => $_POST["txt_title"],
-                                ':name' => $img,
-                                ':text' => $text
-                            )
-                        );
-                        $user_class->returnJSON("OK", "Successfully insert blog.");
-                        return;
-                    }
-                }
-            }
-        }
-        else {
-            $user_class->returnJSON('ERROR', "Image with this name already exist.");
-            return;
-        }
-    }
 
 
     if ($_POST["operation"] === "Promeni") {
+        $id = $_POST['id'];
+        $name = $_POST['order_NAME'];
+        $lastname = $_POST['order_LASTNAME'];
+        $address = $_POST['order_ADDRESS'];
+        $zip = $_POST['order_ZIP'];
+        $time = $_POST['order_TIME'];
+        $phone = $_POST['order_PHONE'];
+        $email = $_POST['order_EMAIL'];
+        $status = $_POST['order_STATUS'];
+        $item = $_POST['order_ITEM'];
+        $quantity = $_POST['order_QUANTITY'];
 
-        $id    = $_POST['id'];
-        $title = $_POST['txt_title'];
-        $img   = $_FILES['image']['name'];
-        $text  = $_POST['txt_text'];
+       
+        $db->beginTransaction();
 
-        if(is_array($_FILES)) {
-            if(is_uploaded_file($_FILES['image']['tmp_name'])) {
-                $sourcePath = $_FILES['image']['tmp_name'];
-                $targetPath = "image/".$_FILES['image']['name'];
-                if (move_uploaded_file($sourcePath, $targetPath)) {
-                    $update_image_sql = "UPDATE `blog` SET `title` = '$title', `image_name` = '$img', `text` = '$text'  WHERE `blog`.`id` = $id;";
-                    $stmt = $db->prepare($update_image_sql);
-                    $result = $stmt->execute();
-                    $user_class->returnJSON("OK", "Successfully change blog.");
-                    return;
-                }
-            }
-        }
-        else {
-            $user_class->returnJSON("inavalid", "Error.");
+        try{
+            $select_query = "SELECT * FROM orders JOIN order_items ON orders.id = order_items.fk_order WHERE order_items.id = " . $_POST["id"] . "";
+            $stmt1 = $db->prepare($select_query);
+    
+            $stmt1->execute();
+            $result1 = $stmt1->fetch();
+
+            $id1 = $result1["fk_order"];
+           
+
+            $query = "UPDATE orders SET name = '$name', lastname = '$lastname', address = '$address', zip = $zip, time = '$time', 
+            phone = $phone, status = '$status' WHERE orders.id = $id1";
+
+            $stm = $db->prepare($query);
+            $stm->execute();
+
+            $query1 = "UPDATE order_items SET item = '$item', quantity = $quantity WHERE fk_order = $id1 AND id = $id";
+
+            $stm2 = $db->prepare($query1);
+            $stm2->execute();
+
+
+            $db->commit();
+        }catch(mysqli_sql_exception $e) {
+            $db->rollBack();
+            throw $e; // $e cuvam u bazu - greska. (datum, naziv, id).
+            $user_class->returnJSON("ERROR","Message not sent. Please try again.");
+            return;
+        }finally{
+            $user_class->returnJSON("OK","Message sent.");
             return;
         }
-    }
 
-}
+    } }?>

@@ -159,7 +159,7 @@
                                     </div>
                                     <div class="product-item-caption">
                                         <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6>
-                                        <h4 class="product-price"><span>1900,00 RSD</span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
+                                        <h4 class="product-price"><span>1900,00 RSD</span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" value="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                     <div class="product-item-caption">
                                         <h6 class="product-title"><a href="single-product.html">POSTKOVID
                                             </a></h6>
-                                        <h4 class="product-price"><span>1900,00 RSD </span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
+                                        <h4 class="product-price"><span>1900,00 RSD </span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" value="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
                                     </div>
                                 </div>
                             </div>

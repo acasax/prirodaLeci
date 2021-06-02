@@ -1085,6 +1085,7 @@
             <thead class="thead-dark">
             <tr>
                 <th style="width: 5%">ID</th>
+                <th>Broj porudžbine</th>
                 <th>Ime</th>
                 <th>Prezime</th>
                 <th>Adresa</th>
@@ -1117,6 +1118,7 @@
             </div>
             <div class="modal-body">
                 <form method="post" id="order_form" enctype="multipart/form-data">
+                
                     <div class="form-group">
                         <label class="control-label">Ime</label>
                         <input type="text" name="order_NAME" onblur="$(this).valid()" id="order_NAME" class="form-control" placeholder="" required >
@@ -1260,6 +1262,10 @@
     <script src="js/tawk-chat.js"></script>-->
     <script src="js/order.js"></script>
     <script src="../js/sweetalert.js"></script>
+
+    <script src="js/form-validation/jquery.form.min.js"></script>
+    <script src="js/form-validation/jquery.validate.min.js"></script>
+    <script src="js/form-validation/form-active.js"></script>
 </body>
 
 </html>

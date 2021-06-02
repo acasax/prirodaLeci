@@ -7,12 +7,21 @@ $query = '';
 $output = array();
 $query .= "SELECT * FROM orders INNER JOIN order_items ON orders.id = order_items.fk_order";
 
-/*
+
 if (isset($_POST["search"]["value"])) {
-    $query .= 'WHERE orders.name LIKE "%' . $_POST["search"]["value"] . '%" OR orders.lastname LIKE "%' . $_POST["search"]["value"] . '%" OR orders.address LIKE "%' . $_POST["search"]["value"] . '%" orders.zip LIKE "%' . $_POST["search"]["value"] . '%" 
-    orders.time LIKE "%' . $_POST["search"]["value"] . '%" orders.phone LIKE "%' . $_POST["search"]["value"] . '%" orders.email LIKE "%' . $_POST["search"]["value"] . '%" orders.status LIKE "%' . $_POST["search"]["value"] . '%" orders.note LIKE "%' . $_POST["search"]["value"] . '%" 
-    orders.item LIKE "%' . $_POST["search"]["value"] . '%" orders.quantity LIKE "%' . $_POST["search"]["value"] . '%" ';
-}*/
+
+    $query .= ' WHERE orders.name LIKE "%' . $_POST["search"]["value"] . '%" ';
+    $query .= 'OR orders.lastname LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.address LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.zip LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.time LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.phone LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.email LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.status LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR orders.note LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR order_items.item LIKE "%' .$_POST["search"]["value"].'%" ';
+    $query .= 'OR order_items.quantity LIKE "%' .$_POST["search"]["value"].'%" ';
+}
 
 /*
 if (isset($_POST["order"])) {
@@ -37,6 +46,7 @@ foreach ($result as $row) {
     $sub_array = array();
     //$img = "php_assets/blog_functions/image/" . $row["image_name"];
     $sub_array[] = $row["id"];
+    $sub_array[] = $row["fk_order"];
     $sub_array[] = $row["name"];
     $sub_array[] = $row["lastname"];
     $sub_array[] = $row["address"];
