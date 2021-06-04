@@ -123,18 +123,18 @@ $(document).ready(function() {
 
 
     $(document).on('click', '.update', function() {
-        let order_id = $(this).attr("id");
+        let product_id = $(this).attr("id");
         $.ajax({
-            url: "product_func/order_fetch_single.php",
+            url: "product_func/product_fetch_single.php",
             method: "POST",
-            data: { order_id: order_id },
+            data: { product_id: product_id },
             dataType: "json",
             success: function(data) {
                 $('#product_form')[0].reset();
                 $('#exampleModalCenter').modal('show');
                 $('#id').val(data.id);
-                $('#order_NAME').val(data.order_NAME);
-                $('#order_LASTNAME').val(data.order_LASTNAME);
+                $('#product_name').val(data.product_NAME);
+                $('#product_description').val(data.product_DESCRIPTION);
                 $('.modal-title').text("Izmena");
                 $('#action').val("Promeni");
                 $('#operation').val("Promeni");
@@ -145,7 +145,7 @@ $(document).ready(function() {
 
 
     $(document).on('click', '.delete', function() {
-        let order_id = $(this).attr("id");
+        let product_id = $(this).attr("id");
         swal({
             title: "Da li ste sigurni da želite da obrišete narudžbinu?",
             type: "error",
@@ -157,9 +157,9 @@ $(document).ready(function() {
         }, function(isConfirm) {
             if (!isConfirm) return;
             $.ajax({
-                url: "product_func/order_delete.php",
+                url: "product_func/product_delete.php",
                 method: "POST",
-                data: { order_id: order_id },
+                data: { product_id: product_id },
                 success: function(data) {
                     let objResp = JSON.parse(data);
                     let str = objResp.type;

@@ -246,9 +246,7 @@
                                     </div>
                                     <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
                                         <div class="header-right-info">
-                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i><span class="indicator-ms"></span></a>
-                                                    
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu"> 
                                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
                                                     <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                         <div class="notification-single-top">
@@ -966,11 +964,11 @@
                 <form method="post" id="product_form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="control-label">Naziv proizvoda</label>
-                        <input type="text" name="product_name" onblur="$(this).valid()" id="txt_title" class="product_name" placeholder="" required >
+                        <input type="text" name="product_name" onblur="$(this).valid()" id="product_name" class="product_name" placeholder="" required >
                     </div>
                     <div class="form-group">
                         <label class="control-label">Opis proizvoda</label>
-                        <input type="text" name="product_description" onblur="$(this).valid()" id="txt_text" class="product_description" placeholder="" required >
+                        <input type="text" name="product_description" onblur="$(this).valid()" id="product_description" class="product_description" placeholder="" required >
                     </div>
             </div>
             <div class="modal-footer">

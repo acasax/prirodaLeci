@@ -23,7 +23,7 @@ $user_class = new USER();
 if (isset($_REQUEST['nonbak']) || isset($_REQUEST['postkovid'])) {
 
     $email_to = "info@resivoje.com";
-    $email_subject = "test";
+    $email_subject = "Dodavanje u magacin";
 
     $nonbak    = $_POST['nonbak'];
     $postkovid    = $_POST['postkovid'];
@@ -42,82 +42,73 @@ if (isset($_REQUEST['nonbak']) || isset($_REQUEST['postkovid'])) {
 
     $db->beginTransaction();
 
-    
 
-    try{
+
+    try {
         $object1 = (object) [
             'name' => 'nonbak',
             'quantity' => $nonbak,
-          ];
+        ];
 
         $object2 = (object) [
             'name' => 'postkovid',
             'quantity' => $postkovid,
-          ];
+        ];
 
         $array = array($object1, $object2);
 
-        foreach($array as $item){
+        foreach ($array as $item) {
             $a = $item->name;
             $b = $item->quantity;
-            if($b != 0)
-            {
-            
-            
+            if ($b != 0) {
 
-            $items_insert = "INSERT INTO storage_items ( item, quantity) VALUE ('$a', $b)";
-            $stm2 = $db->prepare($items_insert);
-            $stm2->execute();
-            
+
+
+                $items_insert = "INSERT INTO storage_items ( item, quantity) VALUE ('$a', $b)";
+                $stm2 = $db->prepare($items_insert);
+                $stm2->execute();
+
+                function clean_string($string)
+                {
+                    $bad = array("content-type", "bcc:", "to:", "cc:", "href");
+                    return str_replace($bad, "", $string);
+                }
+
+                $email_message = "Proizvod: " . clean_string($a) . "\n";
+                $email_message .= "Količina: " . clean_string($b) . "\n";
+
+                $headers = 'Dodavanje u magacin. ' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
+                    @mail($email_to, $email_subject, $email_message, $headers);
+                /*if (@mail($email_to, $email_subject, $email_message, $headers)) {
+                    $user_class->returnJSON("OK", "Message sent.");
+                    return;
+                } else {
+                    $user_class->returnJSON("ERROR", "Message not sent. Please try again.");
+                    return;
+                };*/
             }
-            
         }
-        
+
         $db->commit();
-    }catch(mysqli_sql_exception $e) {
+    } catch (mysqli_sql_exception $e) {
         $db->rollBack();
         throw $e; // $e cuvam u bazu - greska. (datum, naziv, id).
-        $user_class->returnJSON("ERROR","Message not sent. Please try again.");
+        $user_class->returnJSON("ERROR", "Message not sent. Please try again.");
         return;
-    }finally{
-        $user_class->returnJSON("OK","Proizvod je dodat u skladište.");
+    } finally {
+        $user_class->returnJSON("OK", "Proizvod je dodat u skladište.");
         return;
     }
-    
-       
-    
-        
-    
 } else {
     //echo "nije sve setovanoi";
-    $user_class->returnJSON("ERROR","FIll all required fields.");
+    $user_class->returnJSON("ERROR", "FIll all required fields.");
     return;
 }
 
 
 
-    function clean_string($string)
-    {
-        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
-        return str_replace($bad, "", $string);
-    }
-
-    $email_message = "Ime: " . clean_string($name) . "\n";
-    $email_message .= "Prezime: " . clean_string($lastname) . "\n";
-    $email_message .= "Telefon: " . clean_string($phone) . "\n";
-    $email_message .= "Email: " . clean_string($email) . "\n";
-    $email_message .= "Napomena:" . clean_string($napomena) . "\n";
-    /*
-    $headers = 'From: ' . $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-    if (@mail($email_to, $email_subject, $email_message, $headers)) {
-        $user_class->returnJSON("OK", "Message sent.");
-        return;
-    } else {
-        $user_class->returnJSON("ERROR", "Message not sent. Please try again.");
-        return;
-    };*/
+    
         ///} else {
             // echo "error with recaptcha";
             /// $user_class->returnJSON("ERROR",
