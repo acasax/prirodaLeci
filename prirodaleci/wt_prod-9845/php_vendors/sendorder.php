@@ -73,7 +73,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
           $a = $item->name;
           $b = $item->quantity;
 
-        $storage_sql = "SELECT quantity FROM storage_items WHERE item = '$a'";
+        $storage_sql = "SELECT quantity FROM storage_items WHERE item = '   $a'";
 
         $order_sql = "INSERT INTO orders (name, lastname, address, zip, time, phone, email, note) VALUE ('$name', '$lastname', '$address', '$zip', '$date', '$phone', '$email', '$napomena')";
 
