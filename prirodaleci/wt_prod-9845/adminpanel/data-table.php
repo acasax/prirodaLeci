@@ -1036,11 +1036,20 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Status</label>
-                        <input type="text" name="order_STATUS" onblur="$(this).valid()" id="order_STATUS" class="form-control" placeholder="" required >
+                        <select name="order_STATUS" onblur="$(this).valid()" id="order_STATUS" class="form-control" required>
+                        <option value="Neposlato">Neposlato</option>
+                        <option value="Poslato">Poslato</option>
+                        <option value="Stiglo">Stiglo</option>
+                        </select>
+                        <!--<input type="text" name="order_STATUS" onblur="$(this).valid()" id="order_STATUS" class="form-control" placeholder="" required >-->
                     </div>
                     <div class="form-group">
                         <label class="control-label">Proizvod</label>
-                        <input type="text" name="order_ITEM" onblur="$(this).valid()" id="order_ITEM" class="form-control" placeholder="" required >
+                        <select name="order_ITEM" onblur="$(this).valid()" id="order_ITEM" class="form-control" required>
+                        <option value="nonbak">nonbak</option>
+                        <option value="postkovid">postkovid</option>
+                        </select>
+                        <!-- <input type="text" name="order_ITEM" onblur="$(this).valid()" id="order_ITEM" class="form-control" placeholder="" required disabled> -->
                     </div>
                     <div class="form-group">
                         <label class="control-label">Količina</label>
