@@ -53,6 +53,13 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
     
 
     try{
+
+        $order_sql = "INSERT INTO orders (name, lastname, address, zip, time, phone, email, note) VALUE ('$name', '$lastname', '$address', '$zip', '$date', '$phone', '$email', '$napomena')";
+
+        $stm = $db->prepare($order_sql);
+        $stm->execute();
+
+
         $order_select = "SELECT id FROM `orders` ORDER BY id DESC LIMIT 1";
 
         $stm1 = $db->prepare($order_select);
@@ -70,25 +77,31 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
           ];
 
         
-          $a = $item->name;
-          $b = $item->quantity;
+          
 
-        $storage_sql = "SELECT quantity FROM storage_items WHERE item = '   $a'";
+        
 
-        $order_sql = "INSERT INTO orders (name, lastname, address, zip, time, phone, email, note) VALUE ('$name', '$lastname', '$address', '$zip', '$date', '$phone', '$email', '$napomena')";
-
-        $stm = $db->prepare($order_sql);
-        $stm->execute();
-
+        
 
 
         
         //$order_id = $db->lastInsertId();
         
 
+        
+
         $array = array($object1, $object2);
 
         foreach($array as $item){
+
+            
+
+            $a = $item->name;
+            $b = $item->quantity;
+
+            $storage_sql = "SELECT quantity FROM storage_items WHERE item = '$a'";
+            $st = $db->prepare($storage_sql);
+            $st->execute();
 
             $id = $order_id["id"];
             if($b != 0)
