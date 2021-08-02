@@ -5,7 +5,7 @@ include "functions_product.php";
 
 $query = '';
 $output = array();
-$query .= "SELECT * FROM storage_items";
+$query .= "SELECT DISTINCT item FROM storage_items";
 
 
 
@@ -34,15 +34,19 @@ $filtered_rows = $stmt->rowCount();
 
 
 foreach ($result as $row) {
+    $query1 = 'SELECT SUM(quantity) AS ProductSum FROM storage_items WHERE item = "' . $row["item"] . '"';
+    $stmt_sum = $db->prepare($query1);
+    $stmt_sum->execute();
+    $result1 = $stmt_sum->fetch();
 
     $sub_array = array();
     //$img = "php_assets/blog_functions/image/" . $row["image_name"];
-    $sub_array[] = $row["id"];
+    //$sub_array[] = $row["id"];
     $sub_array[] = $row["item"];
-    $sub_array[] = $row["quantity"];
+    $sub_array[] = $result1["ProductSum"];
 
-    $sub_array[] = '<button type="button" name="update" id="' . $row["id"] . '" class="w-100 h-100 update" style="background: none; border: none; margin: auto; text-align: center;" title="Change" ><i class="fas fa-user-edit"></i></button>';
-    $sub_array[] = '<button type="button" name="delete" id="' . $row["id"] . '" class="w-100 h-100 delete" style="background: none; border: none; margin: auto; text-align: center;" title="Delete" ><i class="fas fa-trash"></i></button>';
+    //$sub_array[] = '<button type="button" name="update" id="' . $row["id"] . '" class="w-100 h-100 update" style="background: none; border: none; margin: auto; text-align: center;" title="Change" ><i class="fas fa-user-edit"></i></button>';
+    //$sub_array[] = '<button type="button" name="delete" id="' . $row["id"] . '" class="w-100 h-100 delete" style="background: none; border: none; margin: auto; text-align: center;" title="Delete" ><i class="fas fa-trash"></i></button>';
     $data[] = $sub_array;
 }
 

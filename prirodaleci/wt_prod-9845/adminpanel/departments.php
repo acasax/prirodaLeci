@@ -85,9 +85,9 @@
                     <ul class="metismenu" id="menu1">
                         <li class="active">
                             <a class="has-arrow" href="index.html">
-								   <span class="educate-icon educate-home icon-wrap"></span>
-								   <span class="mini-click-non">Početna</span>
-								</a>
+                                <span class="educate-icon educate-home icon-wrap"></span>
+                                <span class="mini-click-non">Početna</span>
+                            </a>
                             <ul class="submenu-angle" aria-expanded="true">
                                 <li><a title="Dashboard" href="index.php"><span class="mini-sub-pro">Kontrolna tabla</span></a></li>
                                 <!--<li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>-->
@@ -240,13 +240,13 @@
                                     <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
                                         <div class="menu-switcher-pro">
                                             <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-													<i class="educate-icon educate-nav"></i>
-												</button>
+                                                <i class="educate-icon educate-nav"></i>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
                                         <div class="header-right-info">
-                                            <ul class="nav navbar-nav mai-top-nav header-right-menu"> 
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
                                                     <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                         <div class="notification-single-top">
@@ -928,133 +928,133 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-        <div style="padding: 10px;"></div>
+            <div style="padding: 10px;"></div>
         </div>
         <div class="w-100 h-100 users-div">
-    <div class="container-fluid">
-        <button type="button" id="add_button" class="btn btn-primary m-4" data-toggle="modal" data-target="#exampleModalCenter">
-            Dodaj novi proizvod
-        </button>
-        <br>
-        <table id="product_data" class="table table-striped table-bordered" style="width:100%">
-            <thead class="thead-dark">
-            <tr>
-                <th style="width: 5%">ID</th>
-                <th>Naziv</th>
-                <th>Opis</th>
-                <!--<th style="width: 10%">Stanje u magacinu</th>-->
-            </tr>
-            </thead>
-        </table>
-    </div>
-
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Dodavanje proizvoda</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+            <div class="container-fluid">
+                <button type="button" id="add_button" class="btn btn-primary m-4" data-toggle="modal" data-target="#exampleModalCenter">
+                    Dodaj novi proizvod
                 </button>
+                <br>
+                <table id="product_data" class="table table-striped table-bordered" style="width:100%">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th style="width: 5%">ID</th>
+                            <th>Naziv</th>
+                            <th>Opis</th>
+                            <!--<th style="width: 10%">Stanje u magacinu</th>-->
+                        </tr>
+                    </thead>
+                </table>
             </div>
-            <div class="modal-body">
-                <form method="post" id="product_form" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label class="control-label">Naziv proizvoda</label>
-                        <input type="text" name="product_name" onblur="$(this).valid()" id="product_name" class="product_name" placeholder="" required >
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Opis proizvoda</label>
-                        <input type="text" name="product_description" onblur="$(this).valid()" id="product_description" class="product_description" placeholder="" required >
-                    </div>
-            </div>
-            <div class="modal-footer">
-                <input type="hidden" name="id" id="id" />
-                <input type="hidden" name="operation" id="operation" />
-                <input type="submit" name="action" id="action" class="btn btn-primary" value="Add" />
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"  id="dismiss-modal">Leave</button>
-            </div>
-            </form>
 
         </div>
-    </div>
-        <div class="footer-copyright-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Designed by: <a href="www.resivoje.com">ResivoJe</a></p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Dodavanje proizvoda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" id="product_form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="control-label">Naziv proizvoda</label>
+                                <input type="text" name="product_name" onblur="$(this).valid()" id="product_name" class="product_name" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Opis proizvoda</label>
+                                <input type="text" name="product_description" onblur="$(this).valid()" id="product_description" class="product_description" placeholder="" required>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="id" id="id" />
+                        <input type="hidden" name="operation" id="operation" />
+                        <input type="submit" name="action" id="action" class="btn btn-primary" value="Add" />
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="dismiss-modal">Leave</button>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="footer-copyright-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="footer-copy-right">
+                                <p>Copyright © 2018. All rights reserved. Designed by: <a href="www.resivoje.com">ResivoJe</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- jquery
+        <!-- jquery
 		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
 
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <!-- bootstrap JS
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <!-- bootstrap JS
 		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow JS
 		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
+        <script src="js/wow.min.js"></script>
+        <!-- price-slider JS
 		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
+        <script src="js/jquery-price-slider.js"></script>
+        <!-- meanmenu JS
 		============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
+        <script src="js/jquery.meanmenu.js"></script>
+        <!-- owl.carousel JS
 		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- sticky JS
 		============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
+        <script src="js/jquery.sticky.js"></script>
+        <!-- scrollUp JS
 		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <!-- mCustomScrollbar JS
 		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
+        <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+        <!-- metisMenu JS
 		============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- morrisjs JS
+        <script src="js/metisMenu/metisMenu.min.js"></script>
+        <script src="js/metisMenu/metisMenu-active.js"></script>
+        <!-- morrisjs JS
 		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
-    <!-- calendar JS
+        <script src="js/sparkline/jquery.sparkline.min.js"></script>
+        <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+        <!-- calendar JS
 		============================================ -->
-    <script src="js/calendar/moment.min.js"></script>
-    <script src="js/calendar/fullcalendar.min.js"></script>
-    <script src="js/calendar/fullcalendar-active.js"></script>
-    <!-- plugins JS
+        <script src="js/calendar/moment.min.js"></script>
+        <script src="js/calendar/fullcalendar.min.js"></script>
+        <script src="js/calendar/fullcalendar-active.js"></script>
+        <!-- plugins JS
 		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
+        <script src="js/plugins.js"></script>
+        <!-- main JS
 		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
+        <script src="js/main.js"></script>
+        <!-- tawk chat JS
 		============================================ -->
-    <script src="js/tawk-chat.js"></script>
+        <script src="js/tawk-chat.js"></script>
 
-    <script src="js/product.js"></script>
-    <script src="../js/sweetalert.js"></script>
+        <script src="js/product.js"></script>
+        <script src="../js/sweetalert.js"></script>
 
-    <script src="js/form-validation/jquery.form.min.js"></script>
-    <script src="js/form-validation/jquery.validate.min.js"></script>
-    <script src="js/form-validation/form-active.js"></script>
+        <script src="js/form-validation/jquery.form.min.js"></script>
+        <script src="js/form-validation/jquery.validate.min.js"></script>
+        <script src="js/form-validation/form-active.js"></script>
 </body>
 
 </html>

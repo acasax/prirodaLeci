@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     });
 
-    let dataTableSum = $('#product_sum').DataTable({
+    let dataTable = $('#product_sum').DataTable({
         "processing": true,
         "serverSide": true,
         "autoWidth": false,

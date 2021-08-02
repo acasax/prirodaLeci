@@ -3,7 +3,7 @@
 function get_total_all_records($db)
 {
     $stmt = $db->prepare("
-    SELECT * FROM item");
+    SELECT * FROM storage_items");
     $stmt->execute();
     $result = $stmt->fetchAll();
     return $stmt->rowCount();

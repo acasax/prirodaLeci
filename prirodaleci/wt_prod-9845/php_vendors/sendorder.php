@@ -54,6 +54,8 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
 
     try{
 
+        $checkquantity_sql = "SELECT ";
+
         $order_sql = "INSERT INTO orders (name, lastname, address, zip, time, phone, email, note) VALUE ('$name', '$lastname', '$address', '$zip', '$date', '$phone', '$email', '$napomena')";
 
         $stm = $db->prepare($order_sql);
@@ -99,12 +101,13 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
             $a = $item->name;
             $b = $item->quantity;
 
-            $storage_sql = "SELECT quantity FROM storage_items WHERE item = '$a'";
+            $storage_sql = "SELECT SUM(quantity) AS TotalQuantity FROM storage_items WHERE item = '$a'";
+            echo $storage_sql[];
             $st = $db->prepare($storage_sql);
             $st->execute();
 
             $id = $order_id["id"];
-            if($b != 0)
+            if($b != 0 && $b <= $storage_sql["TotalQuantity"])
             {
             
             
@@ -113,6 +116,8 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
             $stm2 = $db->prepare($items_insert);
             $stm2->execute();
             
+            }else{
+                $user_class->returnJSON("ERROR", "Not enough quantity of products");
             }
             
         }
