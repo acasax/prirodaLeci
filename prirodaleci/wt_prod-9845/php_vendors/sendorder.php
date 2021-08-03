@@ -102,16 +102,16 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
             $b = $item->quantity;
 
             $storage_sql = "SELECT SUM(quantity) AS TotalQuantity FROM storage_items WHERE item = '$a'";
-            echo $storage_sql[];
             $st = $db->prepare($storage_sql);
             $st->execute();
+            $quantity_check = $st->fetch();
+            
+            $totalQuantity = $quantity_check["TotalQuantity"];
 
             $id = $order_id["id"];
-            if($b != 0 && $b <= $storage_sql["TotalQuantity"])
+            if($b != 0 && $b <= $totalQuantity)
             {
             
-            
-
             $items_insert = "INSERT INTO order_items (fk_order, item, quantity) VALUE ($id, '$a', $b)";
             $stm2 = $db->prepare($items_insert);
             $stm2->execute();

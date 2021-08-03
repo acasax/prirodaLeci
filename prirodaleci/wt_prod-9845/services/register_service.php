@@ -95,7 +95,12 @@ function password_match($password, $confirm_password){
                 }
                 $_SESSION['user_login'] = true;
                 */
+                session_start();
+
+                $_SESSION["logged"] = true;
+
                 $user_class->returnJSON("OK","Uspešno ste se prijavili!");
+                
     
         }else {
             $user_class->returnJSON("ERROR","Korisnik sa ovim username-om ne postoji!");

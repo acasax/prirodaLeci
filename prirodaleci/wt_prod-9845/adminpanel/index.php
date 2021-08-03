@@ -2,6 +2,12 @@
 <html class="no-js" lang="en">
 
 <head>
+    <?php
+        if($_SESSION["logged"] = false)
+        {
+            header("Location: ../admin.php");
+        }
+    ?>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Kontrolna tabla</title>

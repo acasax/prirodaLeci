@@ -10,4 +10,5 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 login_user($username, $password, $user_class);
+
 ?>
