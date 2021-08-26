@@ -2,6 +2,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
+<title>Priroda leči</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,22 +60,22 @@
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
                                 <div class="rd-navbar-brand" id="logo-header">
-                                    <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
+                                    <a class="brand" href="index.php"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
                                 <div class="rd-navbar-nav-wrap">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Početna</a>
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Početna</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#oNama">O nama</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php#oNama">O nama</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#proizvod">Proizvodi</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php#proizvod">Proizvodi</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php#kontakt">Kontakt</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="product-catalog.php">Kupovina</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="kupovina.php">Kupovina</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -86,7 +87,7 @@
         </header>
         <!-- Swiper Slider-->
         <section class="section swiper-container swiper-modern">
-            <video src="images/resivojesax.mp4" id="video" autoplay loop width="100%" controls>
+            <video src="images/resivojesax.mp4" id="video" autoplay muted width="100%" controls>
             </video>
         </section>
         <!-- Services Box-->
@@ -99,7 +100,7 @@
                             </div>
                             <h4>Ponuda</h4>
                             <p>U našoj prodavnici možete kupiti različite vrste posuđa i pribora za Vaše uživanje u čaju.</p>
-                        </div><a class="box-services-full-width-button" href="product-catalog.php">Naruči odmah</a>
+                        </div><a class="box-services-full-width-button" href="kupovina.php">Naruči odmah</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4">
@@ -110,7 +111,7 @@
                             <h4>Kolekcija čajeva</h4>
                             <p>Imamo redovno ažurirani asortiman čajeva za prave ljubitelje. Svi čajevi su sveže upakovani i odmah isporučeni.</p>
                         </div>
-                        <a class="box-services-full-width-button" href="product-catalog.php">Naruči odmah</a>
+                        <a class="box-services-full-width-button" href="kupovina.php">Naruči odmah</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 ">
@@ -120,7 +121,7 @@
                             </div>
                             <h4>Pokloni</h4>
                             <p>Tražite poklon koji će ceniti pravi ljubitelj čaja? Na našoj stranici možete pronaći tačne informacije o čajevima.</p>
-                        </div><a class="box-services-full-width-button " href="product-catalog.php">Naruči odmah</a>
+                        </div><a class="box-services-full-width-button " href="kupovina.php">Naruči odmah</a>
                     </div>
                 </div>
 
@@ -171,7 +172,7 @@
             <div class="row">
                 <div class="col-5"></div>
                 <div class="col-2">
-                    <a href="product-catalog.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
+                    <a href="kupovina.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
                 </div>
                 <div class="col-5"></div>
             </div>
@@ -197,20 +198,19 @@
 
                 <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="nonbak_product">
                     <div class="img-block">
-                        <a class="thumbnail">
-                            <img class="first-img" src="images/3.png" alt="" />
+                        <a href="kupovina.php" class="thumbnail">
+                            <img class="first-img" src="images/3.png" alt=""/>
                         </a>
                         <div class="quick-view">
-                            <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                <i class="ion-ios-search-strong"></i>
-                            </a>
+                            <a class="quick_view" href="kupovina.php" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
+                                <img src="images/loupe.png"> </a>
                         </div>
                     </div>
                     <ul class="product-flag">
                         <li class="new">Novo</li>
                     </ul>
                     <div class="product-decs">
-                        <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
+                        <a class="inner-link" href="kupovina.php"><span>PRIRODALEČI</span></a>
                         <h2><a class="product-link">Nonbak</a></h2>
                         <div class="rating-product">
                             <i class="ion-android-star"></i>
@@ -229,7 +229,7 @@
                     </div>
                     <div class="add-to-link background-transparent">
                         <ul>
-                            <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
+                            <li class="cart background-transparent"><a class="cart-btn" href="kupovina.php">KUPI ODMAH </a></li>
                             <!--<li>
                                         <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
                                     </li>
@@ -243,13 +243,13 @@
 
                 <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="postkovid_product">
                     <div class="img-block">
-                        <a class="thumbnail">
+                    <a href="kupovina.php" class="thumbnail">
                             <img class="first-img" src="images/2.png" alt="" />
-                            <img class="second-img" src="assets/images/product-image/organic/product-15.jpg" alt="" />
+                            <img class="second-img" src="assets/images/product-image/organic/product-15.jpg" alt=""/>
                         </a>
                         <div class="quick-view">
-                            <a class="quick_view" href="#" data-link-action="quickview" title="" data-toggle="modal" data-target="#exampleModal">
-                                <img src="images/loupe.png" />
+                            <a class="quick_view" href="kupovina.php" data-link-action="quickview" title="" data-toggle="modal" data-target="#exampleModal">
+                                <img src="images/loupe.png"/>
                             </a>
                         </div>
                     </div>
@@ -257,8 +257,8 @@
                         <li class="new">Novo</li>
                     </ul>
                     <div class="product-decs">
-                        <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
-                        <h2><a href="single-product.html" class="product-link">PostKovid</a></h2>
+                        <a class="inner-link" href="kupovina.php"><span>PRIRODALEČI</span></a>
+                        <h2><a href="kupovina.php" class="product-link">PostKovid</a></h2>
                         <div class="rating-product">
                             <i class="ion-android-star"></i>
                             <i class="ion-android-star"></i>
@@ -276,7 +276,7 @@
                     </div>
                     <div class="add-to-link background-transparent">
                         <ul>
-                            <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
+                            <li class="cart background-transparent"><a class="cart-btn" href="kupovina.php">KUPI ODMAH </a></li>
                             <!--<li>
                                         <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
                                     </li>
@@ -441,7 +441,7 @@
                                     <h4>Vreme naručivanja</h4>
                                     <div class="list-terms ">
                                         <dl>
-                                            <dt>Ponedeljak-Nedelja:</dt>
+                                            <dt>Ponedeljak - Nedelja:</dt>
                                             <dd>00 - 24</dd>
                                         </dl>
                                     </div>
@@ -453,18 +453,18 @@
                                     <ul class="list-link ">
                                         <li><a href="index.php">Početna</a>
                                         </li>
-                                        <li><a href="#oNama">O nama</a>
+                                        <li><a href="index.php#oNama">O nama</a>
                                         </li>
-                                        <li><a href="#proizvod">Proizvodi</a>
+                                        <li><a href="index.php#proizvod">Proizvodi</a>
                                         </li>
-                                        <li><a href="#kontakt">Kontakt</a>
+                                        <li><a href="index.php#kontakt">Kontakt</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3 ">
                                 <div class="footer-classic-item ">
-                                    <h4>Contacts</h4>
+                                    <h4>Kontakt</h4>
                                     <ul class="list-contacts ">
                                         <li class="centered "><span class="icon icon-lg icon-secondary mdi mdi-cellphone-android "></span><a class="link-phone " href="tel:# ">+1 (409) 987–5874</a></li>
                                         <li class="centered "><span class="icon icon-lg icon-secondary mdi mdi-email-outline "></span><a href="mailto:# ">info@demolink.org</a></li>

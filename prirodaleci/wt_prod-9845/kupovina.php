@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Narucivanje</title>
+<title>Priroda leči</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,7 +59,7 @@
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
                                 <div class="rd-navbar-brand" id="logo-header">
-                                    <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
+                                    <a class="brand" href="index.php"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
@@ -68,13 +68,13 @@
                                     <ul class="rd-navbar-nav">
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Početna</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#oNama">O nama</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php#oNama">O nama</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#proizvod">Proizvodi</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php#proizvod">Proizvodi</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php#kontakt">Kontakt</a>
                                         </li>
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="product-catalog.php">Kupovina</a>
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="kupovina.php">Kupovina</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -155,10 +155,10 @@
                             <div class="col-sm-6 col-lg-5 col-xl-5">
                                 <div class="product-item">
                                     <div class="product-item-image">
-                                        <a href="single-product.html"><img src="images/3.png" alt="" width="300" height="500" /></a>
+                                        <img src="images/3.png" alt="" width="300" height="500" />
                                     </div>
                                     <div class="product-item-caption">
-                                        <h6 class="product-title"><a href="single-product.html">NONBAK</a></h6>
+                                        <h6 class="product-title">NONBAK</h6>
                                         <h4 class="product-price"><span>1900,00 RSD</span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" value="0" id="nonbak" name="nonbak" onblur="$(this).valid()">
                                     </div>
                                 </div>
@@ -166,10 +166,10 @@
                             <div class="col-sm-6 col-lg-5 col-xl-5">
                                 <div class="product-item">
                                     <div class="product-item-image">
-                                        <a href="single-product.html"><img src="images/2.png" alt="" width="300" height="500" /></a>
+                                       <img src="images/2.png" alt="" width="300" height="500" />
                                     </div>
                                     <div class="product-item-caption">
-                                        <h6 class="product-title"><a href="single-product.html">POSTKOVID
+                                        <h6 class="product-title">POSTKOVID
                                             </a></h6>
                                         <h4 class="product-price"><span>1900,00 RSD </span><span class="old-price"></span></h4><input class="form-input form-control quantity-button" placeholder="0" value="0" id="postkovid" name="postkovid" onblur="$(this).valid()">
                                     </div>
@@ -206,12 +206,7 @@
                                         <li>
                                             <a class="icon-square fa-facebook-f " href="# "></a>
                                         </li>
-                                        <li>
-                                            <a class="icon-square fa-twitter " href="# "></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-square fa-google-plus " href="# "></a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -220,7 +215,7 @@
                                     <h4>Vreme naručivanja</h4>
                                     <div class="list-terms ">
                                         <dl>
-                                            <dt>Ponedeljak-Nedelja:</dt>
+                                            <dt>Ponedeljak - Nedelja:</dt>
                                             <dd>00 - 24</dd>
                                         </dl>
                                     </div>
@@ -232,18 +227,18 @@
                                     <ul class="list-link ">
                                         <li><a href="index.php">Početna</a>
                                         </li>
-                                        <li><a href="#oNama">O nama</a>
+                                        <li><a href="index.php#oNama">O nama</a>
                                         </li>
-                                        <li><a href="#proizvod">Proizvodi</a>
+                                        <li><a href="index.php#proizvod">Proizvodi</a>
                                         </li>
-                                        <li><a href="#kontakt">Kontakt</a>
+                                        <li><a href="index.php#kontakt">Kontakt</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3 ">
                                 <div class="footer-classic-item ">
-                                    <h4>Contacts</h4>
+                                    <h4>Kontakt</h4>
                                     <ul class="list-contacts ">
                                         <li class="centered "><span class="icon icon-lg icon-secondary mdi mdi-cellphone-android "></span><a class="link-phone " href="tel:# ">+1 (409) 987–5874</a></li>
                                         <li class="centered "><span class="icon icon-lg icon-secondary mdi mdi-email-outline "></span><a href="mailto:# ">info@demolink.org</a></li>
