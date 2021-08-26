@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Product Catalog</title>
+    <title>Narucivanje</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,7 +66,7 @@
                                 <div class="rd-navbar-nav-wrap">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Početna</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Početna</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#oNama">O nama</a>
                                         </li>
@@ -74,7 +74,7 @@
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link" href="#kontakt">Kontakt</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="product-catalog.php">Kupovina</a>
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="product-catalog.php">Kupovina</a>
                                         </li>
                                     </ul>
                                 </div>

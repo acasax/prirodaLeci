@@ -155,18 +155,22 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['lastname']) && isset($_REQUEST[
     $email_message .= "Prezime: " . clean_string($lastname) . "\n";
     $email_message .= "Telefon: " . clean_string($phone) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
+    $email_message .= "Address:" . clean_string($address) . "\n";
+    $email_message .= "Zip:" . clean_string($zip) . "\n";
     $email_message .= "Napomena:" . clean_string($napomena) . "\n";
-    /*
+    $email_message .= "Nonbak:" . clean_string($nonbak) . "\n";
+    $email_message .= "Postkovid:" . clean_string($postkovid) . "\n";
+    
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     if (@mail($email_to, $email_subject, $email_message, $headers)) {
-        $user_class->returnJSON("OK", "Message sent.");
+        /*$user_class->returnJSON("OK", "Message sent.");*/
         return;
     } else {
-        $user_class->returnJSON("ERROR", "Message not sent. Please try again.");
+        /*$user_class->returnJSON("ERROR", "Message not sent. Please try again.");*/
         return;
-    };*/
+    };
         ///} else {
             // echo "error with recaptcha";
             /// $user_class->returnJSON("ERROR",

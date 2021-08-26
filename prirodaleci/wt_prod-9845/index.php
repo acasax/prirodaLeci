@@ -26,6 +26,7 @@
             position: relative;
             z-index: 1;
         }
+
         html.ie-10 .ie-panel,
         html.lt-ie-10 .ie-panel {
             display: block;
@@ -49,8 +50,7 @@
         <header class="section page-header page-header-sidebar">
             <!-- RD Navbar-->
             <div class="rd-navbar-wrap">
-                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-sidebar"
-                    data-xl-device-layout="rd-navbar-sidebar" data-xxl-layout="rd-navbar-sidebar" data-xxl-device-layout="rd-navbar-sidebar" data-md-stick-up-offset="80px" data-lg-stick-up-offset="46px" data-md-stick-up="true" data-lg-stick-up="true">
+                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-sidebar" data-xl-device-layout="rd-navbar-sidebar" data-xxl-layout="rd-navbar-sidebar" data-xxl-device-layout="rd-navbar-sidebar" data-md-stick-up-offset="80px" data-lg-stick-up-offset="46px" data-md-stick-up="true" data-lg-stick-up="true">
                     <div class="rd-navbar-main-outer">
                         <div class="rd-navbar-main">
                             <!-- RD Navbar Panel-->
@@ -59,7 +59,7 @@
                                 <button class="rd-navbar-toggles" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand -->
                                 <div class="rd-navbar-brand" id="logo-header">
-                                <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
+                                    <a class="brand" href="index.html"><img src="images/logo-half-color.png" alt="" width="166" height="57" /></a>
                                 </div>
                             </div>
                             <div class="rd-navbar-main-element">
@@ -86,8 +86,8 @@
         </header>
         <!-- Swiper Slider-->
         <section class="section swiper-container swiper-modern">
-        <video src="images/resivojesax.mp4" id="video" autoplay loop width="100%" controls>
-        </video>
+            <video src="images/resivojesax.mp4" id="video" autoplay loop width="100%" controls>
+            </video>
         </section>
         <!-- Services Box-->
         <section class="section section-box-services-full-width context-dark">
@@ -171,7 +171,7 @@
             <div class="row">
                 <div class="col-5"></div>
                 <div class="col-2">
-                <a href="product-catalog.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
+                    <a href="product-catalog.php"><button class="button button-block-form button-secondary-light dugme-naruci">Naruči odmah</button></a>
                 </div>
                 <div class="col-5"></div>
             </div>
@@ -181,7 +181,7 @@
             <div class="parallax-content section-xl parallax-dark context-dark dark-layout ">
                 <div class="container ">
                     <div class="row ">
-                        <div class="col-lg-9 ">
+                        <div class="col-lg-12 " style="text-align: center;">
                             <h2>Dugogodišnja proizvodnja prirodnih čajeva</h2>
                             <h4 class="text-uppercase font-weight-medium ">Nudimo kupcima najkvalitetnije biljne mešavine</h4>
                         </div>
@@ -192,118 +192,134 @@
 
         <!-- Our Projects-->
         <section class="section section-lg bg-gray-100 text-center" id="proizvod">
-        <h2 style="margin-bottom:50px;">šta mi nudimo ?</h2>
-        <div class="row d-flex justify-content-center">
+            <h2 style="margin-bottom:50px;">šta mi nudimo ?</h2>
+            <div class="row d-flex justify-content-center">
 
-                        <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="nonbak_product">
-                            <div class="img-block">
-                                <a class="thumbnail">
-                                    <img class="first-img" src="images/3.png" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">Novo</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
-                                <h2><a class="product-link">Nonbak</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <!--<li class="old-price">1800,00 RSD</li>-->
-                                        <li class="current-price">1.900,00 RSD</li>
-                                        <!--<li class="discount-price">-20%</li>-->
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link background-transparent">
-                                <ul>
-                                    <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
-                                    <!--<li>
-                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </article>
-                        <div class="col-1"></div>
-
-                        <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="postkovid_product">
-                            <div class="img-block">
-                                <a class="thumbnail">
-                                    <img class="first-img" src="images/2.png" alt="" />
-                                    <img class="second-img" src="assets/images/product-image/organic/product-15.jpg" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="" data-toggle="modal" data-target="#exampleModal">
-                                        <img src="images/loupe.png"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">Novo</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
-                                <h2><a href="single-product.html" class="product-link">PostKovid</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <!--<li class="old-price">1800,00 RSD</li>-->
-                                        <li class="current-price">1.900,00 RSD</li>
-                                        <!--<li class="discount-price">-20%</li>-->
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link background-transparent">
-                                <ul>
-                                    <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
-                                    <!--<li>
-                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </article>
+                <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="nonbak_product">
+                    <div class="img-block">
+                        <a class="thumbnail">
+                            <img class="first-img" src="images/3.png" alt="" />
+                        </a>
+                        <div class="quick-view">
+                            <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
+                                <i class="ion-ios-search-strong"></i>
+                            </a>
                         </div>
+                    </div>
+                    <ul class="product-flag">
+                        <li class="new">Novo</li>
+                    </ul>
+                    <div class="product-decs">
+                        <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
+                        <h2><a class="product-link">Nonbak</a></h2>
+                        <div class="rating-product">
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                        </div>
+                        <div class="pricing-meta">
+                            <ul>
+                                <!--<li class="old-price">1800,00 RSD</li>-->
+                                <li class="current-price">1.900,00 RSD</li>
+                                <!--<li class="discount-price">-20%</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add-to-link background-transparent">
+                        <ul>
+                            <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
+                            <!--<li>
+                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i></a>
+                                    </li>-->
+                        </ul>
+                    </div>
+                </article>
+                <div class="col-1"></div>
+
+                <article class="list-product col-md-5 col-lg-5 col-sm-12 product_items" id="postkovid_product">
+                    <div class="img-block">
+                        <a class="thumbnail">
+                            <img class="first-img" src="images/2.png" alt="" />
+                            <img class="second-img" src="assets/images/product-image/organic/product-15.jpg" alt="" />
+                        </a>
+                        <div class="quick-view">
+                            <a class="quick_view" href="#" data-link-action="quickview" title="" data-toggle="modal" data-target="#exampleModal">
+                                <img src="images/loupe.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="product-flag">
+                        <li class="new">Novo</li>
+                    </ul>
+                    <div class="product-decs">
+                        <a class="inner-link" href="shop-4-column.html"><span>PRIRODALEČI</span></a>
+                        <h2><a href="single-product.html" class="product-link">PostKovid</a></h2>
+                        <div class="rating-product">
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                            <i class="ion-android-star"></i>
+                        </div>
+                        <div class="pricing-meta">
+                            <ul>
+                                <!--<li class="old-price">1800,00 RSD</li>-->
+                                <li class="current-price">1.900,00 RSD</li>
+                                <!--<li class="discount-price">-20%</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add-to-link background-transparent">
+                        <ul>
+                            <li class="cart background-transparent"><a class="cart-btn" href="product-catalog.php">KUPI ODMAH </a></li>
+                            <!--<li>
+                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i></a>
+                                    </li>-->
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
         <!-- Section Brands-->
         <section class="parallax-container section " data-parallax-img="images/pozadina-cajevi-ikonice.jpg">
             <div class="parallax-content section-lg parallax-dark context-dark dark-layout ">
                 <div class="container ">
                     <div class="row row-30 row-list-bordered align-items-center ">
-                        <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/nonbak logo.png " alt=" " width="127 " height="90 " /></a>
+                        <div class="col-12">
+                            <h2>Uskoro u ponudi</h2>
                         </div>
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/covid logo.png " alt=" " width="126 " height="72 " /></a>
+                            <img src="images/nonbak logo.png " alt=" " width="127 " height="90 " />
                         </div>
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/alegrano logo.png " alt=" " width="112 " height="106 " /></a>
+                            <img src="images/covid logo.png " alt=" " width="126 " height="72 " />
                         </div>
                         <div class="col-sm-3 ">
-                            <a class="brands " href="# "><img src="images/imunoplus logo.png " alt=" " width="126 " height="87 " /></a>
+                            <img src="images/alegrano logo.png " alt=" " width="112 " height="106 " />
+                        </div>
+                        <div class="col-sm-3 ">
+                                <img src="images/imunoplus logo.png " alt=" " width="126 " height="87 " />
+                        </div>
+                        <!-- Tekst ispod cajeva -->
+                        <div class="col-sm-3 ">
+                            <h4>Antibakterijska biljna mešavina</h4>
+                        </div>
+                        <div class="col-sm-3 ">
+                            <h4>Ubrzan oporavak od posledica Covid-a</h4>
+                        </div>
+                        <div class="col-sm-3 ">
+                            <h4>Antialergijska biljna mešavina</h4>
+                        </div>
+                        <div class="col-sm-3 ">
+                            <h4>Biljna mešavina za jačanje imuniteta</h4>
                         </div>
                     </div>
                 </div>
@@ -333,7 +349,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-wrap">
-                                            <input class="form-input form-control" id="phone" type="text" name="phone" onblur="$(this).valid()"> 
+                                            <input class="form-input form-control" id="phone" type="text" name="phone" onblur="$(this).valid()">
                                             <label class="form-label" for="phone">Telefon</label>
                                         </div>
                                     </div>
@@ -361,24 +377,24 @@
                         <div class="contact-box-wrap ">
                             <div class="contact-box ">
                                 <div class="contact-box-item ">
-                                    <p class="contact-box-title ">Get social</p>
+                                    <p class="contact-box-title ">Društvene mreže</p>
                                     <ul class="list-inline ">
                                         <li>
-                                            <a class="icon icon-xl icon-gray-500 fa-facebook-f " href="# "></a>
+                                            <a class="icon icon-xl icon-gray-500 fa-facebook-f " href="https://www.facebook.com/Pridodale%C4%8Di-107010291535566/ "></a>
                                         </li>
                                         <li>
-                                            <a class="icon icon-xl icon-gray-500 fa-twitter " href="# "></a>
+                                            <a class="icon icon-xl icon-gray-500 fa-instagram " href="https://instagram.com/prirodalleci?utm_medium=copy_link "></a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a class="icon icon-xl icon-gray-500 fa-google " href="# "></a>
                                         </li>
                                         <li>
                                             <a class="icon icon-lg icon-gray-500 fa-youtube " href="# "></a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="contact-box-item ">
-                                    <p class="contact-box-title ">Phone</p>
+                                    <p class="contact-box-title ">Telefon</p>
                                     <div class="link-inline "><span class="icon icon-xl icon-primary-light material-icons-local_phone "></span><a href="tel:# ">1-800-1234-567</a></div>
                                 </div>
                                 <div class="contact-box-item ">
@@ -386,7 +402,7 @@
                                     <div class="link-inline "><span class="icon icon-xl icon-primary-light mdi-email-outline "></span><a href="mailto:# ">info@demolink.org</a></div>
                                 </div>
                                 <div class="contact-box-item ">
-                                    <p class="contact-box-title ">Address</p>
+                                    <p class="contact-box-title ">Adresa</p>
                                     <div class="link-inline link-inline-top "><span class="icon icon-xl icon-primary-light material-icons-location_on "></span><a href="# ">6036 Richmond hwy.,<br>Alexandria, VA, 2230</a></div>
                                 </div>
                             </div>
@@ -406,17 +422,17 @@
                                     <h4>Društvene mreže</h4>
                                     <ul class="list-inline list-inline-xs list-inline-middle ">
                                         <li>
-                                            <a class="icon-square fa-instagram " href="# "></a>
+                                            <a class="icon-square fa-instagram " href="https://instagram.com/prirodalleci?utm_medium=copy_link"></a>
                                         </li>
                                         <li>
-                                            <a class="icon-square fa-facebook-f " href="# "></a>
+                                            <a class="icon-square fa-facebook-f " href="https://www.facebook.com/Pridodale%C4%8Di-107010291535566/"></a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a class="icon-square fa-twitter " href="# "></a>
                                         </li>
                                         <li>
                                             <a class="icon-square fa-google-plus " href="# "></a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
