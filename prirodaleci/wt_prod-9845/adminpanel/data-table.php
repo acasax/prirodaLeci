@@ -83,7 +83,7 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="../images/logo-half-color-small.png" alt="" /></a>
+                <a href="../index.php"><img class="main-logo" src="../images/logo-half-color-small.png" alt="" /></a>
                 <strong><a href="index.html"><img src="img/favicon-prirodal.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
@@ -1074,7 +1074,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved.</p>
+                            <p>Copyright © 2021. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
